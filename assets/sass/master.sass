@@ -1,0 +1,55 @@
+$amarillo: #f3911e;
+$fondo1: #222247;
+$fondo2: #122025;
+$blanco: #ffffff;
+$gris: #bbc4c5;
+$lightFucsia: #d36caf;
+$darkFucsia: #7f4069;
+$morado1: #3f3793;
+$morado2: #37276e;
+$azul1: #29abe2;
+
+body {
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    background-color: $fondo2;
+    font-size: 1em;
+    color: $blanco;
+}
+
+main {
+    flex: 1 0 auto;
+}
+
+footer {
+    height: 100px;
+    background: red;
+}
+
+.bck-morado1 { background-color: $morado1; }
+.bck-morado2 { background-color: $morado2; }
+.bck-azul1 { background-color: $azul1; }
+
+.border-top {
+    border-top: 2px solid $gris;
+}
+
+.segment {
+    min-width: 100%;
+    margin: 0 auto;
+    border-bottom: 2px solid $gris;
+    padding-bottom: 15px;
+    color: $gris;
+    font-size: .8em;
+}
+
+.contents {
+    min-height: calc(100vh - 300px);
+}
+
+/** .svg-size {
+    max-height: calc(100vh - 350px);
+} **/
