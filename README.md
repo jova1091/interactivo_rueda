@@ -1,0 +1,1 @@
+Interactivo rueda con interacción y animaciones
