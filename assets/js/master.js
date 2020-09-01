@@ -347,7 +347,14 @@ const obj = {
     }
 }
 
-$('document').ready(function () {
+$(window).on('load', function() {
+    hideContents()
+    hideText();
+});
+
+$(document).ready(function () {
+    $('.outer-loader').delay(1000).fadeOut('slow');
+
     $('.instrument').click(function () {
         var instrument = $(this).data("instrument");
         var type = $(this).data("type");
@@ -358,16 +365,136 @@ $('document').ready(function () {
         var when = obj["groups"][group]["types"][type]["instruments"][instrument]["when"];
         var which = obj["groups"][group]["types"][type]["instruments"][instrument]["which"];
         toogleTexts(name, definition, requirements, when, which);
+        animationsControl();
+        fillInstrument();
+        checker(3);
+        $(this).addClass('active');
     })
-})
 
-function sendSelection (group, type, instrument) {
-    let name = obj["groups"][group]["types"][type]["instruments"][instrument]["name"];
-    let definition = obj["groups"][group]["types"][type]["instruments"][instrument]["definition"];
-    let requirements = obj["groups"][group]["types"][type]["instruments"][instrument]["requirements"];
-    let when = obj["groups"][group]["types"][type]["instruments"][instrument]["when"];
-    let which = obj["groups"][group]["types"][type]["instruments"][instrument]["which"];
-    toogleTexts(name, definition, requirements, when, which);
+    $('#g-economico').click(function () {
+        checker(1);
+        hideContents(1);
+        setTimeout(
+            function() 
+            {
+              showContents(2);
+            }, 1000);
+    });
+
+    $('#typeComandControl').click(function () {
+        checker(2);
+        hideContents(2);
+        setTimeout(
+            function() 
+            {
+              showContents(3);
+            }, 1000);
+    });
+
+    $('.type').click(function () {
+        unchecker();
+        hideText();
+    });
+});
+
+function hideContents(opt) {
+    switch (opt) {
+        case 1:
+            $('#firstLvl svg').addClass('animate__zoomOut');
+            $('#secondLvl svg').hide();
+            $('body').removeClass('bck1, bck2').addClass('bck1');
+            setTimeout(
+                function() 
+                {
+                    $('#firstLvl div').hide();
+                }, 1000);
+            break;
+
+        case 2:
+            $('#firstLvl div').hide();
+            $('#secondLvl div').show();
+            $('body').removeClass('bck1').addClass('bck2');
+
+            $('#secondLvl svg').addClass('animate__zoomOut');
+            $('#thirdLvl svg').hide();
+            setTimeout(
+                function() 
+                {
+                    $('#secondLvl div').hide();
+                }, 1000);
+            break;
+            
+        case 3:
+            $('#thirdLvl div').show();
+            break;
+    
+        default:
+            $('.contents div').hide();
+            break;
+    }
+}
+
+function showContents(opt) {
+    switch (opt) {
+        case 1:
+            $('#firstLvl div').show();
+            $('body').removeClass('bck1, bck2').addClass('bck1');
+            break;
+
+        case 2:
+            $('body').removeClass('bck1').addClass('bck2');
+            $('#secondLvl div').show();
+            $('#secondLvl svg').addClass('animate__zoomIn').show();
+            break;
+            
+        case 3:
+            $('#thirdLvl div').show();
+            $('#thirdLvl svg').addClass('animate__zoomIn').show();
+            break;
+    
+        default:
+            break;
+    }
+}
+
+function hideText() {
+    $('#text1, #text2, #text3, #text4').hide();
+}
+
+function checker(opt){
+    switch (opt) {
+        case 1:
+            $('#grupo').prop('checked', true);
+            break;
+        case 2:
+            $('#grupo, #tipo').prop('checked', true);
+            break;
+        case 3:
+            $('#instrumento, #requerimiento, #cuando, #combinar').prop('checked', true);
+            break;
+        default:
+            break;
+    }
+}
+
+function unchecker(){
+    $('#instrumento, #requerimiento, #cuando, #combinar').prop('checked', false);
+}
+
+function animationsControl(){
+    let elements = $('#text1, #text2, #text3, #text4');
+    let elementsState = elements.css('display');
+    if(elementsState == 'none'){
+        elements.addClass('animate__zoomIn').show();
+    } else {
+        elements.removeClass('animate__zoomIn').hide().addClass('animate__zoomIn').show();
+    }
+}
+
+function fillInstrument() {
+    $( '.instrument' ).each(function() {
+        $(this).removeClass('active');
+    });
 }
 
 function toogleTexts (name, definition, requirements, when, which) {
