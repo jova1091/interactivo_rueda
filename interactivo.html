@@ -7,10 +7,19 @@
     <title>Interactivo</title>
 
     <link rel="stylesheet" href="assets/thirdpart/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/thirdpart/css/animate.min.css">
     <link rel="stylesheet" href="assets/css/master.min.css">
 </head>
 
-<body>
+<body class="bck1">
+
+    <div class="outer-loader">
+        <div class="d-flex flex-column justify-content-center align-items-center">
+            <h4 class="mb-3">Loading...</h4>
+            <div class="spinner-border" role="status">
+            </div>
+        </div>
+    </div>
 
     <main>
         <!-- menu -->
@@ -71,8 +80,8 @@
                             </div>
                             <div class="col-sm-2 d-flex align-items-stretch">
                                 <div class="form-check segment pt-2">
-                                    <input type="checkbox" name="instrumento" id="instrumento" class="form-check-input">
-                                    <label for="instrumento" class="form-check-label">6. Con que instrumentos
+                                    <input type="checkbox" name="combinar" id="combinar" class="form-check-input">
+                                    <label for="combinar" class="form-check-label">6. Con que instrumentos
                                         combinar</label>
                                 </div>
                             </div>
@@ -83,16 +92,163 @@
         </div>
 
         <!-- graficos -->
-        <div class="container-fluid p-0 contents d-flex align-items-center mt-4">
+        <div class="container-fluid p-0 d-flex align-items-center mt-4">
             <div class="container-fluid row m-0 p-0 pr-5">
                 <div class="col-sm-11 offset-sm-1 p-0">
-                    <div class="row contents d-flex align-items-center">
+                    <div id="firstLvl" class="row d-flex align-items-center">
+                        <div class="col-sm-4 offset-sm-4 p-5">
+                            <div class="p-5">
+                                <svg class="animate__animated" xmlns="http://www.w3.org/2000/svg"
+                                    viewBox="0 0 363.782 340.347">
+                                    <g id="Capa_2" data-name="Capa 2">
+                                        <g id="Capa_1-2" data-name="Capa 1">
+                                            <path id="g-gestion" class="hoverable"
+                                                d="M117.842,292.017a158.913,158.913,0,0,0,228.531-60.743l-137.6-56.824Z"
+                                                fill="#bdc4c6" />
+                                            <path id="g-financiacion" class="hoverable"
+                                                d="M353.61,214.962A158.983,158.983,0,0,0,137.64,14.886l74.632,141.708Z"
+                                                fill="#bdc4c6" />
+                                            <path id="g-economico" class="hoverable"
+                                                d="M121.916,23.312a158.978,158.978,0,0,0-18.45,258.132l91.853-118.758Z"
+                                                fill="#bdc4c6" /><text
+                                                transform="translate(59.837 158.617) scale(0.927 1)" font-size="22.562"
+                                                fill="#1a1a1a" font-family="Lato-Regular, Lato">
+                                                <tspan letter-spacing="-0.024em">E</tspan>
+                                                <tspan x="12.489" y="0" letter-spacing="-0.009em">c</tspan>
+                                                <tspan x="23.059" y="0">onómi</tspan>
+                                                <tspan x="85.205" y="0" letter-spacing="-0.009em">c</tspan>
+                                                <tspan x="95.776" y="0">os</tspan>
+                                            </text><text transform="translate(180.829 246.996) scale(0.927 1)"
+                                                font-size="22.562" fill="#1a1a1a" font-family="Lato-Regular, Lato">
+                                                <tspan letter-spacing="-0.006em">G</tspan>
+                                                <tspan x="16.347" y="0">estión del </tspan>
+                                                <tspan x="30.289" y="27.075">suelo</tspan>
+                                            </text><text transform="translate(207.799 98.83) scale(0.927 1)"
+                                                font-size="22.562" fill="#1a1a1a" font-family="Lato-Regular, Lato">
+                                                <tspan letter-spacing="-0.002em">F</tspan>
+                                                <tspan x="12.713" y="0">inanciación </tspan>
+                                            </text>
+                                            <rect x="237.97" y="287.746" width="52.601" height="52.601" rx="26.301"
+                                                fill="#71bfbb" />
+                                            <path
+                                                d="M258.231,331.77v-3.284a1.151,1.151,0,0,1,1.15-1.151h.311a1.151,1.151,0,0,0,1.151-1.15V313.7a1.151,1.151,0,0,0-1.151-1.151h-.311a1.15,1.15,0,0,1-1.15-1.151v-3.283a1.15,1.15,0,0,1,1.15-1.151h7.477a1.151,1.151,0,0,1,1.151,1.151v18.072a1.15,1.15,0,0,0,1.151,1.15h0a1.151,1.151,0,0,1,1.15,1.151v3.284a1.15,1.15,0,0,1-1.15,1.15h-9.779A1.15,1.15,0,0,1,258.231,331.77Zm10.426-32.1a4.517,4.517,0,0,1-1.223,3.181,3.956,3.956,0,0,1-5.9,0,4.75,4.75,0,0,1,0-6.361,3.943,3.943,0,0,1,5.884,0A4.489,4.489,0,0,1,268.657,299.671Z"
+                                                fill="#112025" />
+                                            <rect x="293.468" y="15.3" width="52.601" height="52.601" rx="26.301"
+                                                fill="#71bfbb" />
+                                            <path
+                                                d="M313.729,59.324V56.04a1.151,1.151,0,0,1,1.151-1.151h.31a1.15,1.15,0,0,0,1.151-1.15V41.252A1.151,1.151,0,0,0,315.19,40.1h-.31a1.151,1.151,0,0,1-1.151-1.151V35.667a1.151,1.151,0,0,1,1.151-1.151h7.476a1.151,1.151,0,0,1,1.151,1.151V53.739a1.15,1.15,0,0,0,1.151,1.15h0a1.152,1.152,0,0,1,1.151,1.151v3.284a1.151,1.151,0,0,1-1.151,1.15H314.88A1.15,1.15,0,0,1,313.729,59.324Zm10.426-32.1a4.513,4.513,0,0,1-1.223,3.181,3.955,3.955,0,0,1-5.9,0,4.747,4.747,0,0,1,0-6.361,3.941,3.941,0,0,1,5.884,0A4.489,4.489,0,0,1,324.155,27.225Z"
+                                                fill="#112025" />
+                                            <rect y="127.978" width="52.601" height="52.601" rx="26.301"
+                                                fill="#71bfbb" />
+                                            <path
+                                                d="M20.261,172v-3.284a1.15,1.15,0,0,1,1.151-1.15h.31a1.151,1.151,0,0,0,1.151-1.151V153.93a1.151,1.151,0,0,0-1.151-1.151h-.31a1.15,1.15,0,0,1-1.151-1.15v-3.284a1.151,1.151,0,0,1,1.151-1.151h7.476a1.151,1.151,0,0,1,1.151,1.151v18.072a1.151,1.151,0,0,0,1.151,1.151h0a1.151,1.151,0,0,1,1.151,1.15V172a1.152,1.152,0,0,1-1.151,1.151H21.412A1.151,1.151,0,0,1,20.261,172Zm10.426-32.1a4.509,4.509,0,0,1-1.223,3.181,3.955,3.955,0,0,1-5.895,0,4.747,4.747,0,0,1,0-6.361,3.943,3.943,0,0,1,5.884,0A4.5,4.5,0,0,1,30.687,139.9Z"
+                                                fill="#112025" />
+                                        </g>
+                                    </g>
+                                </svg>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="secondLvl" class="row contents d-flex align-items-center">
+                        <div class="col-sm-4 offset-sm-4 p-5">
+                            <div class="px-5">
+                                <svg class="animate__animated" xmlns="http://www.w3.org/2000/svg"
+                                    viewBox="0 0 420.485 541.759">
+                                    <g id="Capa_2" data-name="Capa 2">
+                                        <g id="Capa_1-2" data-name="Capa 1">
+                                            <circle cx="127.5" cy="288.992" r="127" fill="none" stroke="#aab8bd"
+                                                stroke-miterlimit="10" />
+                                            <circle cx="127.5" cy="288.992" r="109" fill="#bdc4c6" />
+                                            <path id="typeComandControl"  class="hoverable"
+                                                d="M282.36,541.759l-74.072-118.8a154.541,154.541,0,0,0,50.939-52.072l120.408,71.429A295.154,295.154,0,0,1,282.36,541.759Z"
+                                                fill="#c95697" opacity="0.62" />
+                                            <path class="hoverable"
+                                                d="M386.08,430.871,262.588,364.92a151.055,151.055,0,0,0,17.9-70.381l139.994,1.375A293.732,293.732,0,0,1,386.08,430.871Z"
+                                                fill="#cb5c9e" opacity="0.62" />
+                                            <path class="hoverable"
+                                                d="M280.409,287.623a150.835,150.835,0,0,0-19.645-69.877l121.818-69a293.49,293.49,0,0,1,37.745,134.09Z"
+                                                fill="#cb5c9e" opacity="0.62" />
+                                            <path class="hoverable"
+                                                d="M257.247,211.852a154.546,154.546,0,0,0-52.206-50.8l71.1-120.6a295.151,295.151,0,0,1,99.7,97Z"
+                                                fill="#c95697" opacity="0.62" />
+                                            <path class="hoverable"
+                                                d="M199.07,157.714A151.1,151.1,0,0,0,128.646,140L129.667,0A293.756,293.756,0,0,1,264.7,34.048Z"
+                                                fill="#c95697" opacity="0.62" /><text
+                                                transform="translate(62.399 296.307)" font-size="21.167" fill="#112025"
+                                                font-family="MyriadPro-Semibold, MyriadPro Semibold" font-weight="600">E
+                                                <tspan x="10.414" y="0" letter-spacing="-0.021em">C</tspan>
+                                                <tspan x="22.246" y="0">ONÓMI</tspan>
+                                                <tspan x="87.419" y="0" letter-spacing="-0.021em">C</tspan>
+                                                <tspan x="99.251" y="0">OS</tspan>
+                                            </text><text transform="translate(141.51 75.853)" font-size="14" fill="#fff"
+                                                font-family="Lato-Regular, Lato">
+                                                <tspan letter-spacing="-0.021em">E</tspan>
+                                                <tspan x="7.791" y="0">ducación</tspan>
+                                                <tspan x="62.871" y="0" letter-spacing="-0.025em"> </tspan>
+                                                <tspan x="66.105" y="0" letter-spacing="-0.024em">y</tspan>
+                                                <tspan x="72.979" y="0"> </tspan>
+                                                <tspan x="4.186" y="16.8" letter-spacing="-0.043em">F</tspan>
+                                                <tspan x="11.494" y="16.8">ormación</tspan>
+                                            </text><text transform="translate(248.189 135.317)" font-size="14"
+                                                fill="#fff" font-family="Lato-Regular, Lato">
+                                                <tspan letter-spacing="-0.075em">V</tspan>
+                                                <tspan x="8.428" y="0">olu</tspan>
+                                                <tspan x="27.474" y="0" letter-spacing="-0.007em">n</tspan>
+                                                <tspan x="35.188" y="0">tarios</tspan>
+                                            </text><text transform="translate(304.827 223.317)" font-size="14"
+                                                fill="#fff" font-family="Lato-Regular, Lato">
+                                                <tspan letter-spacing="-0.033em">R</tspan>
+                                                <tspan x="8.315" y="0">epar</tspan>
+                                                <tspan x="35.607" y="0" letter-spacing="-0.002em">t</tspan>
+                                                <tspan x="40.592" y="0">o de </tspan>
+                                                <tspan x="9.18" y="16.8">ca</tspan>
+                                                <tspan x="22.822" y="16.8" letter-spacing="-0.012em">r</tspan>
+                                                <tspan x="27.757" y="16.8">gas</tspan>
+                                                <tspan x="48.057" y="16.8" letter-spacing="-0.025em"> </tspan>
+                                                <tspan x="51.291" y="16.8" letter-spacing="-0.024em">y</tspan>
+                                                <tspan x="58.165" y="16.8"> </tspan>
+                                                <tspan x="2.46" y="33.6">ben</tspan>
+                                                <tspan x="25.503" y="33.6" letter-spacing="-0.005em">e</tspan>
+                                                <tspan x="32.824" y="33.6">ficios</tspan>
+                                            </text><text transform="translate(292.116 338.317)" font-size="14"
+                                                fill="#fff" font-family="Lato-Regular, Lato">
+                                                <tspan letter-spacing="-0.024em">E</tspan>
+                                                <tspan x="7.749" y="0" letter-spacing="-0.009em">c</tspan>
+                                                <tspan x="14.308" y="0">onómi</tspan>
+                                                <tspan x="52.869" y="0" letter-spacing="-0.009em">c</tspan>
+                                                <tspan x="59.428" y="0">os o de </tspan>
+                                                <tspan x="24.682" y="16.8" letter-spacing="-0.015em">M</tspan>
+                                                <tspan x="37.464" y="16.8">e</tspan>
+                                                <tspan x="44.855" y="16.8" letter-spacing="-0.021em">r</tspan>
+                                                <tspan x="49.664" y="16.8">cado</tspan>
+                                            </text><text transform="translate(247.34 443.317)" font-size="14"
+                                                fill="#fff" font-family="Lato-Regular, Lato">
+                                                <tspan letter-spacing="-0.01em">C</tspan>
+                                                <tspan x="9.212" y="0">omando</tspan>
+                                                <tspan x="59.211" y="0" letter-spacing="-0.025em"> </tspan>
+                                                <tspan x="62.444" y="0" letter-spacing="-0.024em">y</tspan>
+                                                <tspan x="69.318" y="0"> </tspan>
+                                                <tspan x="11.693" y="16.8" letter-spacing="-0.01em">C</tspan>
+                                                <tspan x="20.905" y="16.8">o</tspan>
+                                                <tspan x="28.843" y="16.8" letter-spacing="-0.007em">n</tspan>
+                                                <tspan x="36.557" y="16.8">t</tspan>
+                                                <tspan x="41.575" y="16.8" letter-spacing="-0.021em">r</tspan>
+                                                <tspan x="46.384" y="16.8">ol</tspan>
+                                            </text></g>
+                                    </g>
+                                </svg>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="thirdLvl" class="row contents d-flex align-items-center">
                         <div class="col-sm-6 px-5">
                             <div class="px-5">
-                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 729.36 669.93">
+                                <svg class="animate__animated" xmlns="http://www.w3.org/2000/svg"
+                                    viewBox="0 0 729.36 669.93">
                                     <defs>
                                         <style>
-                                            .instrument {
+                                            .instrument,
+                                            .type {
                                                 fill: #d16bad;
                                             }
 
@@ -121,23 +277,32 @@
                                     </defs>
                                     <g id="Capa_2" data-name="Capa 2">
                                         <g id="Capa_1-2" data-name="Capa 1">
-                                            <path class="instrument" data-instrument="derechos_de_propiedad" data-type="comando_y_control" data-group="economicos"
+                                            <path class="instrument hoverable" data-instrument="derechos_de_propiedad"
+                                                data-type="comando_y_control" data-group="economicos"
                                                 d="M657,669.93,445.44,556.53a373.69,373.69,0,0,0,18.1-39l223.22,88.15A613.19,613.19,0,0,1,657,669.93Z" />
-                                            <path class="instrument" data-instrument="licencia_y_permisos" data-type="comando_y_control" data-group="economicos"
+                                            <path class="instrument hoverable" data-instrument="licencia_y_permisos"
+                                                data-type="comando_y_control" data-group="economicos"
                                                 d="M689.45,598.72,465.16,513.31a369.82,369.82,0,0,0,12.94-41l232.69,58.76A611.32,611.32,0,0,1,689.45,598.72Z" />
-                                            <path class="instrument" data-instrument="tarifas" data-type="comando_y_control" data-group="economicos"
+                                            <path class="instrument hoverable" data-instrument="tarifas"
+                                                data-type="comando_y_control" data-group="economicos"
                                                 d="M712.58,523.82,479.17,467.93a369,369,0,0,0,7.56-42.32L725.05,454A612.81,612.81,0,0,1,712.58,523.82Z" />
-                                            <path class="instrument" data-instrument="peajes" data-type="comando_y_control" data-group="economicos"
+                                            <path class="instrument hoverable" data-instrument="peajes"
+                                                data-type="comando_y_control" data-group="economicos"
                                                 d="M725.89,446.6,487.24,421.1a375.2,375.2,0,0,0,2.12-39.86c0-1.07,0-2.14,0-3.2l240-2.14c0,1.78,0,3.56,0,5.34A619.17,619.17,0,0,1,725.89,446.6Z" />
-                                            <path class="instrument" data-instrument="multa" data-type="comando_y_control" data-group="economicos"
+                                            <path class="instrument hoverable" data-instrument="multa"
+                                                data-type="comando_y_control" data-group="economicos"
                                                 d="M489.28,373.42c0-2.11-.11-4.28-.19-6.44A380.46,380.46,0,0,0,485,324l237.24-36.3A621.07,621.07,0,0,1,728.93,358c.13,3.51.23,7,.3,10.49Z" />
-                                            <path class="instrument" data-instrument="tasa" data-type="comando_y_control" data-group="economicos"
+                                            <path class="instrument hoverable" data-instrument="tasa"
+                                                data-type="comando_y_control" data-group="economicos"
                                                 d="M484.31,319.48a373.39,373.39,0,0,0-9.47-42l230.64-66.37a612.68,612.68,0,0,1,15.61,69.14Z" />
-                                            <path class="instrument" data-instrument="banco_de_tierras" data-type="comando_y_control" data-group="economicos"
+                                            <path class="instrument hoverable" data-instrument="banco_de_tierras"
+                                                data-type="comando_y_control" data-group="economicos"
                                                 d="M473.56,273.17a370.84,370.84,0,0,0-14.78-40.38L679,137.34A610.5,610.5,0,0,1,703.37,204Z" />
-                                            <path class="instrument" data-instrument="impuestos" data-type="comando_y_control" data-group="economicos"
+                                            <path class="instrument hoverable" data-instrument="impuestos"
+                                                data-type="comando_y_control" data-group="economicos"
                                                 d="M457,228.64a370.22,370.22,0,0,0-19.85-38.17L643.23,67.54A613.31,613.31,0,0,1,676,130.47Z" />
-                                            <path class="instrument hoverable" data-instrument="plusvalia" data-type="comando_y_control" data-group="economicos"
+                                            <path class="instrument hoverable" data-instrument="plusvalia"
+                                                data-type="comando_y_control" data-group="economicos"
                                                 d="M434.75,183.58a373.78,373.78,0,0,0-24.62-35.38L598.91,0a614.68,614.68,0,0,1,40.45,58.15Z" />
                                             <circle class="cls-2" cx="127.5" cy="380.04" r="105" />
                                             <circle class="cls-3" cx="127.5" cy="380.04" r="127" />
@@ -160,7 +325,7 @@
                                                 d="M179.66,377.65c0,4.78-2.9,7.51-6.83,7.51s-6.56-3.07-6.56-7.26c0-4.38,2.75-7.47,6.77-7.47C177.21,370.43,179.66,373.58,179.66,377.65Zm-10.64.21c0,2.9,1.46,5.2,4,5.2s3.93-2.33,3.93-5.31c0-2.69-1.33-5.23-3.93-5.23S169,374.91,169,377.86Z" />
                                             <path class="cls-4"
                                                 d="M181.84,382.09a7.19,7.19,0,0,0,3.45.91c1.68,0,2.61-.78,2.61-1.95s-.72-1.71-2.54-2.37c-2.35-.84-3.85-2.09-3.85-4.15,0-2.32,1.94-4.1,5-4.1a7.53,7.53,0,0,1,3.43.72l-.63,2.09a6.16,6.16,0,0,0-2.84-.67c-1.65,0-2.37.88-2.37,1.71,0,1.1.83,1.61,2.73,2.35,2.48.93,3.68,2.18,3.68,4.23,0,2.29-1.73,4.28-5.41,4.28a8.58,8.58,0,0,1-3.86-.89Z" />
-                                            <path class="instrument"
+                                            <path class="type hoverable"
                                                 d="M426.59,252a310.36,310.36,0,0,0-47.24-74L245.05,287.15A136.72,136.72,0,0,1,261.9,449.52L412,535.64a306.29,306.29,0,0,0,40.82-127.45A309.59,309.59,0,0,0,426.59,252Z" />
                                             <path class="cls-5"
                                                 d="M429.59,248a310.36,310.36,0,0,0-47.24-74l-8.62,7a308.78,308.78,0,0,1,70,226.22c-3.95,42.64-18.94,85.79-40.64,124.21l9,5c24.23-40.46,39.42-86.69,43.64-132.21A309.59,309.59,0,0,0,429.59,248Z" />
@@ -371,34 +536,35 @@
                                                 d="M574.34,465.41a4,4,0,0,0,1.82,1c1.07.21,1.67-.22,1.81-.89s-.21-1.16-1.21-1.78c-1.35-.8-1.87-1.74-1.68-2.7a2.53,2.53,0,0,1,3.25-1.82,4.17,4.17,0,0,1,1.89.89l-.58,1a3.18,3.18,0,0,0-1.56-.8c-.87-.17-1.45.23-1.57.84s.29,1.06,1.27,1.67c1.29.81,1.87,1.65,1.63,2.85-.28,1.42-1.58,2.2-3.5,1.82a4.58,4.58,0,0,1-2.15-1Z" />
                                         </g>
                                     </g>
+                                </svg>
                             </div>
                         </div>
                         <div class="col-sm-6 d-flex flex-wrap flex-column align-items-center align-content-center">
-                            <div class="row mb-4 p-3">
-                                <div class="col-sm-12 p-4 bck-azul1">
-                                    <h5 id="instrument"></h5>
-                                    <p class="m-0">
-                                        <b>Definición: </b><span id="definition"></span>
+                            <div class="row mb-4 w-100">
+                                <div class="col-sm-12 mb-4">
+                                    <p id="text1" class="m-0 p-4 bck-azul1 animate__animated ">
+                                        <b id="instrument"></b>
+                                        <span>
+                                            <b>Definición: </b><span id="definition" class="pr-2"></span>
+                                        </span>
                                     </p>
                                 </div>
-                            </div>
-                            <div class="row mb-2">
                                 <div class="col-sm-4 d-flex align-items-stretch">
-                                    <p class="m-0 p-4 bck-morado1">
+                                    <p id="text2" class="m-0 p-4 bck-morado1 animate__animated ">
                                         <b>Requerimientos mínimos:</b> <br>
-                                        <span id="requirements"></span>
+                                        <span id="requirements" class="pr-2"></span>
                                     </p>
                                 </div>
                                 <div class="col-sm-4 d-flex align-items-stretch">
-                                    <p class="m-0 p-4 bck-morado1">
+                                    <p id="text3" class="m-0 p-4 bck-morado1 animate__animated ">
                                         <b>Cuando aplicarlo:</b> <br>
-                                        <span id="when"></span>
+                                        <span id="when" class="pr-2"></span>
                                     </p>
                                 </div>
                                 <div class="col-sm-4 d-flex align-items-stretch">
-                                    <p class="m-0 p-4 bck-morado2">
+                                    <p id="text4" class="m-0 p-4 bck-morado2 animate__animated ">
                                         <b>Con cual combinar:</b> <br>
-                                        <span id="which"></span>
+                                        <span id="which" class="pr-2"></span>
                                     </p>
                                 </div>
                             </div>
