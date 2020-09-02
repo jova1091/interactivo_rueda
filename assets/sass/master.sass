@@ -3,6 +3,7 @@ $fondo1: #222247;
 $fondo2: #122025;
 $blanco: #ffffff;
 $gris: #bbc4c5;
+$lightGris: #e3eef0;
 $lightFucsia: #d36caf;
 $darkFucsia: #7f4069;
 $morado1: #3f3793;
@@ -32,11 +33,11 @@ main {
 }
 
 footer {
-    height: 100px;
+    max-height: 100px;
 }
 
 svg {
-    width: 100%;
+    width: 98%;
     height: auto;
     margin: 0 auto;
 }
@@ -71,6 +72,27 @@ svg {
     border-top: 2px solid $gris;
 }
 
+.nav-item {
+    &:nth-child(1) {
+        border-right: 2px solid $blanco;
+    }
+    
+    .nav-link {
+        color: $blanco;
+
+
+        &:hover{
+            color: $lightFucsia;
+        }
+
+        img {
+            height: 25px;
+            width: auto;
+            margin: 0.3em;
+        }
+    }
+}
+
 .segment {
     min-width: 100%;
     margin: 0 auto;
@@ -79,10 +101,6 @@ svg {
     color: $gris;
     font-size: .8em;
 }
-
-/** .contents {
-    min-height: 70vh;
-} **/
 
 #text1 {
     max-height: 20vh;
@@ -122,11 +140,12 @@ svg {
 
 #text2,
 #text3,
-#text4 {
-    max-height: 45vh;
+#text4, 
+#text5 {
+    max-height: 32vh;
 
     span {
-        max-height: 30vh;
+        max-height: 22vh;
         display: block;
         overflow: auto;
 
@@ -152,6 +171,34 @@ svg {
     }
 }
 
+.modal_rueda {
+    width: 140px;
+    height: auto;
+    position: absolute;
+    top: 0;
+    left: 3rem;
+
+    /** width: 80px; **/
+
+    img {
+        margin-left: 1.5em;
+    }
+
+    span {
+        line-height: 0;
+        height: 15px;
+        border-bottom: 1px solid $blanco;
+        padding: 0 0 0 105px;
+        transform: rotate(-90deg) translateX(-62px) translateY(-71px);
+        position: absolute;
+        /** 
+        padding: 0 0 0 75px;
+        transform: rotate(-90deg) translateX(-45px) translateY(-55px);
+        **/
+    }
+
+}
+
 /* Clase para el hover de los elementos de instrumento */
 .active {
     fill: $darkFucsia !important;
@@ -162,5 +209,14 @@ svg {
 
     &:hover {
         fill: $darkFucsia;
+    }
+}
+
+.hoverable2{
+    cursor: pointer;
+
+    &:hover {
+        fill: $lightGris;
+
     }
 }

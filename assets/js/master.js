@@ -391,10 +391,30 @@ $(document).ready(function () {
             }, 1000);
     });
 
-    $('.type').click(function () {
-        unchecker();
+    $('#group2, #group3').click(function () {
+        unchecker(1);
         hideText();
+        fillInstrument()
+        hideContents(2);
+        setTimeout(
+            function() 
+            {
+              showContents(1);
+            }, 1000);
     });
+
+    $('#typeInstrument').click(function () {
+        unchecker(2);
+        hideText();
+        fillInstrument()
+        hideContents(3);
+        setTimeout(
+            function() 
+            {
+              showContents(2);
+            }, 1000);
+    });
+
 });
 
 function hideContents(opt) {
@@ -414,7 +434,6 @@ function hideContents(opt) {
             $('#firstLvl div').hide();
             $('#secondLvl div').show();
             $('body').removeClass('bck1').addClass('bck2');
-
             $('#secondLvl svg').addClass('animate__zoomOut');
             $('#thirdLvl svg').hide();
             setTimeout(
@@ -425,7 +444,12 @@ function hideContents(opt) {
             break;
             
         case 3:
-            $('#thirdLvl div').show();
+            $('#thirdLvl svg').addClass('animate__zoomOut');
+            setTimeout(
+                function() 
+                {
+                    $('#thirdLvl div').hide();
+                }, 1000);
             break;
     
         default:
@@ -437,19 +461,20 @@ function hideContents(opt) {
 function showContents(opt) {
     switch (opt) {
         case 1:
-            $('#firstLvl div').show();
             $('body').removeClass('bck1, bck2').addClass('bck1');
+            $('#firstLvl div').show();
+            $('#firstLvl svg').removeClass('animate__zoomOut').addClass('animate__zoomIn').show();
             break;
 
         case 2:
             $('body').removeClass('bck1').addClass('bck2');
             $('#secondLvl div').show();
-            $('#secondLvl svg').addClass('animate__zoomIn').show();
+            $('#secondLvl svg').removeClass('animate__zoomOut').addClass('animate__zoomIn').show();
             break;
             
         case 3:
             $('#thirdLvl div').show();
-            $('#thirdLvl svg').addClass('animate__zoomIn').show();
+            $('#thirdLvl svg').removeClass('animate__zoomOut').addClass('animate__zoomIn').show();
             break;
     
         default:
@@ -458,7 +483,7 @@ function showContents(opt) {
 }
 
 function hideText() {
-    $('#text1, #text2, #text3, #text4').hide();
+    $('#text1, #text2, #text3, #text4, #text5').hide();
 }
 
 function checker(opt){
@@ -477,12 +502,24 @@ function checker(opt){
     }
 }
 
-function unchecker(){
-    $('#instrumento, #requerimiento, #cuando, #combinar').prop('checked', false);
+function unchecker(opt){
+    switch (opt) {
+        case 1:
+            $('#grupo, #tipo, #instrumento, #requerimiento, #cuando, #combinar').prop('checked', false);
+            break;
+        case 2:
+            $('#tipo, #instrumento, #requerimiento, #cuando, #combinar').prop('checked', false);
+            break;
+        case 3:
+            $('#instrumento, #requerimiento, #cuando, #combinar').prop('checked', false);
+            break;
+        default:
+            break;
+    }
 }
 
 function animationsControl(){
-    let elements = $('#text1, #text2, #text3, #text4');
+    let elements = $('#text1, #text2, #text3, #text4, #text5');
     let elementsState = elements.css('display');
     if(elementsState == 'none'){
         elements.addClass('animate__zoomIn').show();
