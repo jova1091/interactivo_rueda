@@ -353,6 +353,9 @@ $(window).on('load', function() {
 });
 
 $(document).ready(function () {
+
+    $('.groups').load(jsonSVG.groups)
+
     $('.outer-loader').delay(1000).fadeOut('slow');
 
     $('.instrument').click(function () {
@@ -396,6 +399,16 @@ $(document).ready(function () {
         hideText();
     });
 });
+
+function mostrar(algo) {
+    checker(1);
+    hideContents(1);
+    setTimeout(
+        function() 
+        {
+            showContents(2);
+        }, 1000);
+}
 
 function hideContents(opt) {
     switch (opt) {
