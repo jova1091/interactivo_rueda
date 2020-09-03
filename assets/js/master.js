@@ -198,7 +198,7 @@ const obj = {
                         }
                     }
                 },
-                "reporte_de_cargas_y_beneficios": {
+                "reparto_de_cargas_y_beneficios": {
                     "instruments": {
                         "transferencias_de_derechos_de_construccion": {
                             "name": "Transferencias de derechos de construcción",
@@ -354,7 +354,7 @@ $(window).on('load', function() {
 
 $(document).ready(function () {
 
-    $('.groups').load(jsonSVG.groups)
+    $('#groups').load(jsonSVG.groups)
 
     $('.outer-loader').delay(1000).fadeOut('slow');
 
@@ -411,7 +411,7 @@ $(document).ready(function () {
             }, 1000);
     });
 
-    $('#typeInstrument').click(function () {
+    /* $('#typeInstrument').click(function () {
         unchecker(2);
         hideText();
         fillInstrument()
@@ -421,18 +421,79 @@ $(document).ready(function () {
             {
               showContents(2);
             }, 1000);
-    });
+    }); */
 
 });
 
-function mostrar(algo) {
+function showType(svg) {
     checker(1);
     hideContents(1);
     setTimeout(
         function() 
         {
+            loadSVG("#types", jsonSVG[svg])
             showContents(2);
         }, 1000);
+}
+
+function showTypeInstrument(svg) {
+    checker(2);
+    hideContents(2);
+    setTimeout(
+        function() 
+        {
+            loadSVG("#typeInstrument", jsonSVG[svg])
+            showContents(3);
+        }, 1000);
+}
+
+function returnToTypesInstrument() {
+    unchecker(2);
+    hideText();
+    fillInstrument()
+    hideContents(3);
+    setTimeout(
+        function() 
+        {
+            showContents(2);
+        }, 1000);
+}
+
+function showInstrument(group, type, instrument) {
+    /* var instrument = $(this).data("instrument");
+    var type = $(this).data("type");
+    var group = $(this).data("group"); */
+    let name = obj["groups"][group]["types"][type]["instruments"][instrument]["name"];
+    let definition = obj["groups"][group]["types"][type]["instruments"][instrument]["definition"];
+    let requirements = obj["groups"][group]["types"][type]["instruments"][instrument]["requirements"];
+    let when = obj["groups"][group]["types"][type]["instruments"][instrument]["when"];
+    let which = obj["groups"][group]["types"][type]["instruments"][instrument]["which"];
+    toogleTexts(name, definition, requirements, when, which);
+    hideText();
+    setTimeout(
+        function() 
+        {
+            animationsControl();
+        }, 100);
+    fillInstrument();
+    checker(3);
+    $('#' + instrument).addClass('active');
+}
+
+function returnToGroups() {
+    unchecker(1);
+    hideText();
+    fillInstrument()
+    hideContents(2);
+    setTimeout(
+        function() 
+        {
+            showContents(1);
+        }, 1000);
+}
+
+function loadSVG(id, svg) {
+    $(id).load(svg)
 }
 
 function hideContents(opt) {

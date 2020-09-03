@@ -208,15 +208,14 @@ svg {
 }
 
 /* Clase para el hover de los elementos de instrumento */
-.active {
+.active > path {
     fill: $darkFucsia !important;
 }
 
 .hoverable{
     cursor: pointer;
-
     &:hover > path {
-        fill: $darkFucsia;
+        fill: $darkFucsia!important;
     }
 }
 
