@@ -32,19 +32,17 @@
                     <div class="collapse navbar-collapse d-flex justify-content-end" id="navbarSupportedContent">
                         <ul class="navbar-nav mr-5">
                             <li class="nav-item active">
-                                <a class="nav-link" href="#"><img src="assets/img/icons/icon-home.png" alt="home">
-                                    Inicio</a>
+                                <a class="nav-link d-flex align-items-baseline" href="#"><img src="assets/img/icons/icon-home.png" alt="home"> Inicio</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="#">Descarga <img src="assets/img/icons/icon-pdf.png"
-                                        alt="Descargar"></a>
+                                <a class="nav-link d-flex align-items-baseline" href="#">Descarga <img src="assets/img/icons/icon-pdf.png" alt="Descargar"></a>
                             </li>
                         </ul>
                     </div>
                 </nav>
 
-                <div class="container-fluid row m-0 p-0 pr-5 pt-2">
-                    <div class="col-sm-11 offset-sm-1 p-0 border-top">
+                <div class="container-fluid row m-0 py-0 px-5 pt-2">
+                    <div class="col-sm-12 p-0 border-top">
                         <div class="row">
                             <div class="col-sm-2 d-flex align-items-stretch">
                                 <div class="form-check segment pt-2">
@@ -93,8 +91,13 @@
 
         <!-- graficos -->
         <div class="container-fluid p-0 d-flex align-items-center mt-4">
-            <div class="container-fluid row m-0 p-0 pr-5">
-                <div class="col-sm-11 offset-sm-1 p-0">
+            <div class="container-fluid row m-0 p-0">
+                <div class="col-sm-12 py-0 px-5">
+                    <a class="modal_rueda" data-toggle="modal" data-target="#modal_rueda">
+                        <span>RUTA</span>
+                        <img src="assets/img/rueda_miniatura.png" alt="" class="img-fluid w-100">
+                    </a>
+                    
                     <div id="firstLvl" class="row d-flex align-items-center">
                         <div class="col-sm-4 offset-sm-4 p-5">
                             <div class="p-5">
@@ -150,6 +153,7 @@
                             </div>
                         </div>
                     </div>
+                    
                     <div id="secondLvl" class="row contents d-flex align-items-center">
                         <div class="col-sm-4 offset-sm-4 p-5">
                             <div class="px-5">
@@ -159,7 +163,7 @@
                                         <g id="Capa_1-2" data-name="Capa 1">
                                             <circle cx="127.5" cy="288.992" r="127" fill="none" stroke="#aab8bd"
                                                 stroke-miterlimit="10" />
-                                            <circle cx="127.5" cy="288.992" r="109" fill="#bdc4c6" />
+                                            <circle id="group2" cx="127.5" cy="288.992" r="109" fill="#bdc4c6" />
                                             <path id="typeComandControl"  class="hoverable"
                                                 d="M282.36,541.759l-74.072-118.8a154.541,154.541,0,0,0,50.939-52.072l120.408,71.429A295.154,295.154,0,0,1,282.36,541.759Z"
                                                 fill="#c95697" opacity="0.62" />
@@ -241,6 +245,7 @@
                             </div>
                         </div>
                     </div>
+                    
                     <div id="thirdLvl" class="row contents d-flex align-items-center">
                         <div class="col-sm-6 px-5">
                             <div class="px-5">
@@ -305,8 +310,8 @@
                                             <path class="instrument hoverable" data-instrument="plusvalia"
                                                 data-type="comando_y_control" data-group="economicos"
                                                 d="M434.75,183.58a373.78,373.78,0,0,0-24.62-35.38L598.91,0a614.68,614.68,0,0,1,40.45,58.15Z" />
-                                            <circle class="cls-2" cx="127.5" cy="380.04" r="105" />
-                                            <circle class="cls-3" cx="127.5" cy="380.04" r="127" />
+                                            <circle id="group3" class="cls-2 hoverable2" cx="127.5" cy="380.04" r="105" />
+                                            <circle class="cls-3 hoverable2_out" cx="127.5" cy="380.04" r="127" />
                                             <path class="cls-4"
                                                 d="M73.09,378.6H67.71v4.19h6v2.14H65.11V370.66h8.3v2.14h-5.7v3.68h5.38Z" />
                                             <path class="cls-4"
@@ -326,7 +331,7 @@
                                                 d="M179.66,377.65c0,4.78-2.9,7.51-6.83,7.51s-6.56-3.07-6.56-7.26c0-4.38,2.75-7.47,6.77-7.47C177.21,370.43,179.66,373.58,179.66,377.65Zm-10.64.21c0,2.9,1.46,5.2,4,5.2s3.93-2.33,3.93-5.31c0-2.69-1.33-5.23-3.93-5.23S169,374.91,169,377.86Z" />
                                             <path class="cls-4"
                                                 d="M181.84,382.09a7.19,7.19,0,0,0,3.45.91c1.68,0,2.61-.78,2.61-1.95s-.72-1.71-2.54-2.37c-2.35-.84-3.85-2.09-3.85-4.15,0-2.32,1.94-4.1,5-4.1a7.53,7.53,0,0,1,3.43.72l-.63,2.09a6.16,6.16,0,0,0-2.84-.67c-1.65,0-2.37.88-2.37,1.71,0,1.1.83,1.61,2.73,2.35,2.48.93,3.68,2.18,3.68,4.23,0,2.29-1.73,4.28-5.41,4.28a8.58,8.58,0,0,1-3.86-.89Z" />
-                                            <path class="type hoverable"
+                                            <path id="typeInstrument" class="type hoverable"
                                                 d="M426.59,252a310.36,310.36,0,0,0-47.24-74L245.05,287.15A136.72,136.72,0,0,1,261.9,449.52L412,535.64a306.29,306.29,0,0,0,40.82-127.45A309.59,309.59,0,0,0,426.59,252Z" />
                                             <path class="cls-5"
                                                 d="M429.59,248a310.36,310.36,0,0,0-47.24-74l-8.62,7a308.78,308.78,0,0,1,70,226.22c-3.95,42.64-18.94,85.79-40.64,124.21l9,5c24.23-40.46,39.42-86.69,43.64-132.21A309.59,309.59,0,0,0,429.59,248Z" />
@@ -541,7 +546,7 @@
                             </div>
                         </div>
                         <div class="col-sm-6 d-flex flex-wrap flex-column align-items-center align-content-center">
-                            <div class="row mb-4 w-100">
+                            <div class="row w-100">
                                 <div class="col-sm-12 mb-4">
                                     <p id="text1" class="m-0 p-4 bck-azul1 animate__animated ">
                                         <b id="instrument"></b>
@@ -551,21 +556,29 @@
                                     </p>
                                 </div>
                                 <div class="col-sm-4 d-flex align-items-stretch">
-                                    <p id="text2" class="m-0 p-4 bck-morado1 animate__animated ">
+                                    <p id="text2" class="m-0 p-4 bck-morado1 animate__animated animate__delay-2s ">
                                         <b>Requerimientos mínimos:</b> <br>
                                         <span id="requirements" class="pr-2"></span>
                                     </p>
                                 </div>
                                 <div class="col-sm-4 d-flex align-items-stretch">
-                                    <p id="text3" class="m-0 p-4 bck-morado1 animate__animated ">
+                                    <p id="text3" class="m-0 p-4 bck-morado1 animate__animated animate__delay-2s ">
                                         <b>Cuando aplicarlo:</b> <br>
                                         <span id="when" class="pr-2"></span>
                                     </p>
                                 </div>
                                 <div class="col-sm-4 d-flex align-items-stretch">
-                                    <p id="text4" class="m-0 p-4 bck-morado2 animate__animated ">
+                                    <p id="text4" class="m-0 p-4 bck-morado2 animate__animated animate__delay-2s ">
                                         <b>Con cual combinar:</b> <br>
                                         <span id="which" class="pr-2"></span>
+                                    </p>
+                                </div>
+                                <div class="col-sm-12 mt-4">
+                                    <p id="text5" class="m-0 p-4 bck-azul2 animate__animated animate__delay-3s ">
+                                        <b id=""></b>
+                                        <span>
+                                            <b>Definición: </b><span id="definition" class="pr-2">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Aliquam voluptas, eaque similique impedit esse necessitatibus qui quam, eveniet blanditiis quibusdam ab vero odio, doloribus architecto a minima! Repellat, eos enim.</span>
+                                        </span>
                                     </p>
                                 </div>
                             </div>
@@ -587,6 +600,27 @@
             </div>
         </div>
     </footer>
+
+    <!-- Modal -->
+    <div class="modal fade" id="modal_rueda" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-xl">
+        <div class="modal-content">
+            <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+            </button>
+            </div>
+            <div class="modal-body">
+            ...
+            </div>
+            <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+            <button type="button" class="btn btn-primary">Save changes</button>
+            </div>
+        </div>
+        </div>
+    </div>
 
     <script src="assets/thirdpart/js/jquery-3.5.1.min.js"></script>
     <script src="assets/thirdpart/js/bootstrap.min.js"></script>
