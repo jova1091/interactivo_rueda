@@ -541,19 +541,34 @@ function showContents(opt) {
     switch (opt) {
         case 1:
             $('body').removeClass('bck1, bck2').addClass('bck1');
+            $('#firstLvl svg').removeClass('animate__zoomOut')
             $('#firstLvl div').show();
-            $('#firstLvl svg').removeClass('animate__zoomOut').addClass('animate__zoomIn').show();
+            setTimeout(
+                function() 
+                {
+                    $('#firstLvl svg').addClass('animate__zoomIn');
+                }, 1000);
             break;
 
         case 2:
             $('body').removeClass('bck1').addClass('bck2');
+            $('#secondLvl svg').removeClass('animate__zoomOut');
             $('#secondLvl div').show();
-            $('#secondLvl svg').removeClass('animate__zoomOut').addClass('animate__zoomIn').show();
+            setTimeout(
+                function() 
+                {
+                    $('#secondLvl svg').addClass('animate__zoomIn');
+                }, 1000);
             break;
             
         case 3:
+            $('#thirdLvl svg').removeClass('animate__zoomOut');
             $('#thirdLvl div').show();
-            $('#thirdLvl svg').removeClass('animate__zoomOut').addClass('animate__zoomIn').show();
+            setTimeout(
+                function() 
+                {
+                    $('#thirdLvl svg').addClass('animate__zoomIn');
+                }, 1000);
             break;
     
         default:
