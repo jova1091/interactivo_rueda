@@ -365,7 +365,12 @@ $(document).ready(function () {
         var when = obj["groups"][group]["types"][type]["instruments"][instrument]["when"];
         var which = obj["groups"][group]["types"][type]["instruments"][instrument]["which"];
         toogleTexts(name, definition, requirements, when, which);
-        animationsControl();
+        hideText();
+        setTimeout(
+            function() 
+            {
+                animationsControl();
+            }, 100);
         fillInstrument();
         checker(3);
         $(this).addClass('active');
@@ -482,10 +487,6 @@ function showContents(opt) {
     }
 }
 
-function hideText() {
-    $('#text1, #text2, #text3, #text4, #text5').hide();
-}
-
 function checker(opt){
     switch (opt) {
         case 1:
@@ -519,13 +520,13 @@ function unchecker(opt){
 }
 
 function animationsControl(){
-    let elements = $('#text1, #text2, #text3, #text4, #text5');
-    let elementsState = elements.css('display');
-    if(elementsState == 'none'){
-        elements.addClass('animate__zoomIn').show();
-    } else {
-        elements.removeClass('animate__zoomIn').hide().addClass('animate__zoomIn').show();
-    }
+    $('#text1, #text5').addClass('animate__fadeInDown').show();
+    $('#text2, #text3, #text4').addClass('animate__flipInX').show();
+}
+
+function hideText() {
+    $('#text1, #text5').removeClass('animate__fadeInDown').hide();
+    $('#text2, #text3, #text4').removeClass('animate__flipInX').hide();
 }
 
 function fillInstrument() {
