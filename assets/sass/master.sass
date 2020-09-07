@@ -1,15 +1,26 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap');
+    
 $amarillo: #f3911e;
 $fondo1: #222247;
 $fondo2: #122025;
 $blanco: #ffffff;
+$negro: #000000;
 $gris: #bbc4c5;
 $lightGris: #e3eef0;
 $lightFucsia: #d36caf;
 $darkFucsia: #7f4069;
+$Fucsia1: #e27aaf;
+$Fucsia2: #d16bad;
+$Fucsia3: #b74b90;
+$Fucsia4: #84266a;
 $morado1: #3f3793;
 $morado2: #37276e;
+$morado3: #1b1464;
+$morado4: #332c91;
 $azul1: #29abe2;
 $azul2: #66b9dc;
+$azul3: #266ec4;
+
 
 body {
     margin: 0;
@@ -17,9 +28,11 @@ body {
     min-height: 100vh;
     display: flex;
     flex-direction: column;
-    font-size: 1em;
+    font-size: .8em;
     color: $blanco;
     overflow-x: hidden;
+    overflow-y: auto;
+    font-family: 'Montserrat', sans-serif;
 
     &.bck1{
         background-color: $fondo1;
@@ -35,7 +48,10 @@ main {
 }
 
 footer {
-    max-height: 100px;
+    min-height: 100px;
+    max-height: 115px;
+    background-image: url('../img/footer.png');
+    background-size: cover;
 }
 
 svg {
@@ -179,12 +195,14 @@ svg {
     }
 }
 
-.modal_rueda {
+.btn_modal_rueda {
     width: 140px;
     height: auto;
     position: absolute;
     top: 0;
     left: 3rem;
+    z-index: 1;
+    cursor: pointer;
 
     /** width: 80px; **/
 
@@ -207,6 +225,39 @@ svg {
 
 }
 
+.modal {
+    background: rgba($negro, 0.85)
+}
+
+.modal_rueda{
+    background-color: rgba($morado3, 95);
+
+    .modal-header {
+        border-bottom: 0px;
+    }
+
+    .close {
+        color: $blanco;
+        font-size: 5rem;
+        font-weight: 100;
+        text-shadow: 0 0 transparent;
+        opacity: .7;
+        position: absolute;
+        right: 1rem;
+        top: 0rem;
+        z-index: 1000;
+
+        &:focus, &:hover {
+            outline: none;
+            font-weight: 200;
+        }    
+    }
+}
+
+.contents {
+    min-height: calc( 100vh - 325px);
+}
+
 /* Clase para el hover de los elementos de instrumento */
 .active > path {
     fill: $darkFucsia !important;
@@ -225,5 +276,111 @@ svg {
     &:hover {
         fill: $lightGris;
 
+    }
+}
+
+.levels {
+    position: absolute;
+    width: 260px;
+    font-size: 0.8em;
+    left: 3rem;
+    bottom: 5px;
+
+    span {
+        min-width: 25%; 
+        height: 15px;
+        border: 1px solid transparent;
+        position: relative;
+
+         &:before {
+            content: '';
+            position: absolute;
+            top: -9px;
+            left: calc(50% - 6px);
+            width: 0; 
+            height: 0; 
+            border-top: 6px solid $gris;
+            border-right: 6px solid transparent;
+            border-left: 6px solid transparent;
+        }
+    }
+
+    .indicator {
+        &:before {
+            content: '-';
+            position: absolute;
+            left: 20px;   
+            top: 7px;             
+            z-index: 1;
+            color: $blanco;
+            font-size: 1.5em;
+            font-weight: 900;
+            line-height: 0;
+        }
+
+        &:after {
+            content: '+';
+            position: absolute;
+            right: 20px;   
+            top: 7px;             
+            z-index: 1;
+            color: $blanco;
+            font-size: 1.5em;
+            font-weight: 500;
+            line-height: 0;
+        }    
+    }
+
+    .colors_inv {
+
+        h5 {
+            color: $azul3;
+        }
+
+        >div {
+            display: flex;
+
+            span {
+                &:nth-child(1) {
+                    background-color: $azul1;
+                }
+                &:nth-child(2) {
+                    background-color: $azul3;
+                }
+                &:nth-child(3) {
+                    background-color: $morado4;
+                }
+                &:nth-child(4) {
+                    background-color: $morado2;
+                } 
+            }
+        }   
+    }
+
+    .colors_ges {
+
+        h5 {
+            color: $darkFucsia;
+        }
+
+        >div {
+            display: flex;
+
+            span {
+                &:nth-child(1) {
+                    background-color: $Fucsia1;
+                }
+                &:nth-child(2) {
+                    background-color: $Fucsia2;
+                }
+                &:nth-child(3) {
+                    background-color: $Fucsia3;
+                }
+                &:nth-child(4) {
+                    background-color: $Fucsia4;
+                }
+            }
+                
+        }   
     }
 }

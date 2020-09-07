@@ -347,122 +347,51 @@ const obj = {
     }
 }
 
-$(window).on('load', function() {
+$(window).on('load', function () {
     hideContents()
     hideText();
 });
 
 $(document).ready(function () {
-
+    know_resolution();
     $('#groups').load(jsonSVG.groups)
-
     $('.outer-loader').delay(1000).fadeOut('slow');
-
-    $('.instrument').click(function () {
-        var instrument = $(this).data("instrument");
-        var type = $(this).data("type");
-        var group = $(this).data("group");
-        var name = obj["groups"][group]["types"][type]["instruments"][instrument]["name"];
-        var definition = obj["groups"][group]["types"][type]["instruments"][instrument]["definition"];
-        var requirements = obj["groups"][group]["types"][type]["instruments"][instrument]["requirements"];
-        var when = obj["groups"][group]["types"][type]["instruments"][instrument]["when"];
-        var which = obj["groups"][group]["types"][type]["instruments"][instrument]["which"];
-        toogleTexts(name, definition, requirements, when, which);
-        hideText();
-        setTimeout(
-            function() 
-            {
-                animationsControl();
-            }, 100);
-        fillInstrument();
-        checker(3);
-        $(this).addClass('active');
-    })
-
-    $('#g-economico').click(function () {
-        checker(1);
-        hideContents(1);
-        setTimeout(
-            function() 
-            {
-              showContents(2);
-            }, 1000);
-    });
-
-    $('#typeComandControl').click(function () {
-        checker(2);
-        hideContents(2);
-        setTimeout(
-            function() 
-            {
-              showContents(3);
-            }, 1000);
-    });
-
-    $('#group2, #group3').click(function () {
-        unchecker(1);
-        hideText();
-        fillInstrument()
-        hideContents(2);
-        setTimeout(
-            function() 
-            {
-              showContents(1);
-            }, 1000);
-    });
-
-    /* $('#typeInstrument').click(function () {
-        unchecker(2);
-        hideText();
-        fillInstrument()
-        hideContents(3);
-        setTimeout(
-            function() 
-            {
-              showContents(2);
-            }, 1000);
-    }); */
-
 });
+
+function know_resolution () {
+    let widthScreen = screen.width;
+    console.log(widthScreen);
+
+    if (widthScreen <= 1280) {
+        $('#thirdLvl > div:nth-child(1) div ').removeClass('px-5');
+    }
+}
+
+function loadSVG(id, svg) {
+    $(id).load(svg)
+}
 
 function showType(svg) {
     checker(1);
     hideContents(1);
+    loadSVG("#types", jsonSVG[svg])
     setTimeout(
-        function() 
-        {
-            loadSVG("#types", jsonSVG[svg])
+        function () {
             showContents(2);
-        }, 1000);
+        }, 300);
 }
 
 function showTypeInstrument(svg) {
     checker(2);
     hideContents(2);
+    loadSVG("#typeInstrument", jsonSVG[svg])
     setTimeout(
-        function() 
-        {
-            loadSVG("#typeInstrument", jsonSVG[svg])
+        function () {
             showContents(3);
-        }, 1000);
-}
-
-function returnToTypesInstrument() {
-    unchecker(2);
-    hideText();
-    fillInstrument()
-    hideContents(3);
-    setTimeout(
-        function() 
-        {
-            showContents(2);
-        }, 1000);
+        }, 300);
 }
 
 function showInstrument(group, type, instrument) {
-    /* var instrument = $(this).data("instrument");
-    var type = $(this).data("type");
-    var group = $(this).data("group"); */
     let name = obj["groups"][group]["types"][type]["instruments"][instrument]["name"];
     let definition = obj["groups"][group]["types"][type]["instruments"][instrument]["definition"];
     let requirements = obj["groups"][group]["types"][type]["instruments"][instrument]["requirements"];
@@ -471,8 +400,7 @@ function showInstrument(group, type, instrument) {
     toogleTexts(name, definition, requirements, when, which);
     hideText();
     setTimeout(
-        function() 
-        {
+        function () {
             animationsControl();
         }, 100);
     fillInstrument();
@@ -484,99 +412,102 @@ function returnToGroups() {
     unchecker(1);
     hideText();
     fillInstrument()
-    hideContents(2);
+    hideContents();
     setTimeout(
-        function() 
-        {
+        function () {
             showContents(1);
-        }, 1000);
+        }, 300);
 }
 
-function loadSVG(id, svg) {
-    $(id).load(svg)
-}
-
-function hideContents(opt) {
-    switch (opt) {
-        case 1:
-            $('#firstLvl svg').addClass('animate__zoomOut');
-            $('#secondLvl svg').hide();
-            $('body').removeClass('bck1, bck2').addClass('bck1');
-            setTimeout(
-                function() 
-                {
-                    $('#firstLvl div').hide();
-                }, 1000);
-            break;
-
-        case 2:
-            $('#firstLvl div').hide();
-            $('#secondLvl div').show();
-            $('body').removeClass('bck1').addClass('bck2');
-            $('#secondLvl svg').addClass('animate__zoomOut');
-            $('#thirdLvl svg').hide();
-            setTimeout(
-                function() 
-                {
-                    $('#secondLvl div').hide();
-                }, 1000);
-            break;
-            
-        case 3:
-            $('#thirdLvl svg').addClass('animate__zoomOut');
-            setTimeout(
-                function() 
-                {
-                    $('#thirdLvl div').hide();
-                }, 1000);
-            break;
-    
-        default:
-            $('.contents div').hide();
-            break;
-    }
+function returnToTypesInstrument() {
+    unchecker(2);
+    hideText();
+    fillInstrument()
+    hideContents(3);
+    setTimeout(
+        function () {
+            showContents(2);
+        }, 300);
 }
 
 function showContents(opt) {
     switch (opt) {
         case 1:
             $('body').removeClass('bck1, bck2').addClass('bck1');
-            $('#firstLvl svg').removeClass('animate__zoomOut')
+            $('#firstLvl svg').removeClass('animate__zoomOut').hide();
             $('#firstLvl div').show();
             setTimeout(
-                function() 
-                {
-                    $('#firstLvl svg').addClass('animate__zoomIn');
-                }, 1000);
+                function () {
+                    $('#firstLvl svg').addClass('animate__zoomIn').show();
+                }, 300);
             break;
 
         case 2:
             $('body').removeClass('bck1').addClass('bck2');
-            $('#secondLvl svg').removeClass('animate__zoomOut');
+            $('#secondLvl svg').removeClass('animate__zoomOut').hide();
             $('#secondLvl div').show();
             setTimeout(
-                function() 
-                {
-                    $('#secondLvl svg').addClass('animate__zoomIn');
-                }, 1000);
+                function () {
+                    $('#secondLvl svg').addClass('animate__zoomIn').show();
+                }, 300);
             break;
-            
+
         case 3:
-            $('#thirdLvl svg').removeClass('animate__zoomOut');
+            $('#thirdLvl svg').removeClass('animate__zoomOut').hide();
+            $('#thirdLvl').addClass('contents');
             $('#thirdLvl div').show();
             setTimeout(
-                function() 
-                {
-                    $('#thirdLvl svg').addClass('animate__zoomIn');
-                }, 1000);
+                function () {
+                    $('#thirdLvl svg').addClass('animate__zoomIn').show();
+                }, 300);
             break;
-    
+
         default:
             break;
     }
 }
 
-function checker(opt){
+function hideContents(opt) {
+    switch (opt) {
+        case 1:
+            $('body').removeClass('bck1, bck2').addClass('bck1');
+            $('#firstLvl svg').removeClass('animate__zoomIn');
+            $('#firstLvl svg').addClass('animate__zoomOut');
+            setTimeout(
+                function () {
+                    $('#firstLvl div').hide();
+                }, 400);
+            break;
+
+        case 2:
+            $('body').removeClass('bck1').addClass('bck2');
+            $('#secondLvl svg').removeClass('animate__zoomIn');
+            $('#secondLvl svg').addClass('animate__zoomOut');
+            setTimeout(
+                function () {
+                    $('#secondLvl div').hide();
+                }, 400);
+            break;
+
+        case 3:
+            $('#thirdLvl svg').removeClass('animate__zoomIn');
+            $('#thirdLvl svg').addClass('animate__zoomOut');
+            setTimeout(
+                function () {
+                    $('#thirdLvl div').hide();
+                    $('#thirdLvl').removeClass('contents');
+                }, 400);
+            break;
+
+        default:
+            $('#secondLvl div').hide();
+            $('#thirdLvl div').hide();
+            $('#thirdLvl').removeClass('contents');
+            break;
+    }
+}
+
+function checker(opt) {
     switch (opt) {
         case 1:
             $('#grupo').prop('checked', true);
@@ -592,7 +523,7 @@ function checker(opt){
     }
 }
 
-function unchecker(opt){
+function unchecker(opt) {
     switch (opt) {
         case 1:
             $('#grupo, #tipo, #instrumento, #requerimiento, #cuando, #combinar').prop('checked', false);
@@ -608,7 +539,13 @@ function unchecker(opt){
     }
 }
 
-function animationsControl(){
+function fillInstrument() {
+    $('.hoverable').each(function () {
+        $(this).removeClass('active');
+    });
+}
+
+function animationsControl() {
     $('#text1, #text5').addClass('animate__fadeInDown').show();
     $('#text2, #text3, #text4').addClass('animate__flipInX').show();
 }
@@ -618,13 +555,7 @@ function hideText() {
     $('#text2, #text3, #text4').removeClass('animate__flipInX').hide();
 }
 
-function fillInstrument() {
-    $( '.instrument' ).each(function() {
-        $(this).removeClass('active');
-    });
-}
-
-function toogleTexts (name, definition, requirements, when, which) {
+function toogleTexts(name, definition, requirements, when, which) {
     $('#instrument').html(name);
     $('#definition').html(definition);
     $('#requirements').html(requirements);
