@@ -354,6 +354,7 @@ $(window).on('load', function () {
 
 $(document).ready(function () {
     know_resolution();
+    indicatorState(0, 0);
     $('#groups').load(jsonSVG.groups)
     $('.outer-loader').delay(1000).fadeOut('slow');
 });
@@ -381,8 +382,9 @@ function showType(svg) {
         }, 300);
 }
 
-function showTypeInstrument(svg) {
+function showTypeInstrument(svg, inv, ges) {
     checker(2);
+    indicatorState(inv, ges);
     hideContents(2);
     loadSVG("#typeInstrument", jsonSVG[svg])
     setTimeout(
@@ -410,6 +412,7 @@ function showInstrument(group, type, instrument) {
 
 function returnToGroups() {
     unchecker(1);
+    indicatorState(0,0);
     hideText();
     fillInstrument()
     hideContents();
@@ -421,6 +424,7 @@ function returnToGroups() {
 
 function returnToTypesInstrument() {
     unchecker(2);
+    indicatorState(0,0);
     hideText();
     fillInstrument()
     hideContents(3);
@@ -561,4 +565,24 @@ function toogleTexts(name, definition, requirements, when, which) {
     $('#requirements').html(requirements);
     $('#when').html(when);
     $('#which').html(which);
+}
+
+function indicatorState(inv, ges) {
+    if( inv == 0) {
+        $('.indicator span').each(function(){
+            $(this).removeClass('selected');
+        });
+    } else {
+        $('.colors_inv .indicator span:nth-child('+inv+')').addClass('selected');
+    }
+
+    if( ges == 0) {
+        $('.indicator span').each(function(){
+            $(this).removeClass('selected');
+        });
+    } else {
+        $('.colors_ges .indicator span:nth-child('+ges+')').addClass('selected');
+    }
+
+   
 }

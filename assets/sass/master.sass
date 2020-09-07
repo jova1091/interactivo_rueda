@@ -124,6 +124,19 @@ svg {
     padding-bottom: 15px;
     color: $gris;
     font-size: .8em;
+    font-weight: 700;
+
+    &::before {  
+        content: '';
+        position: absolute;
+        bottom: -8px;
+        left: calc(50% - 6px);
+        width: 0; 
+        height: 0; 
+        border-top: 6px solid $gris;
+        border-right: 6px solid transparent;
+        border-left: 6px solid transparent;
+    }
 }
 
 #text1 {
@@ -292,16 +305,18 @@ svg {
         border: 1px solid transparent;
         position: relative;
 
-         &:before {
-            content: '';
-            position: absolute;
-            top: -9px;
-            left: calc(50% - 6px);
-            width: 0; 
-            height: 0; 
-            border-top: 6px solid $gris;
-            border-right: 6px solid transparent;
-            border-left: 6px solid transparent;
+        &.selected {
+            &::before {  
+                content: '';
+                position: absolute;
+                top: -9px;
+                left: calc(50% - 6px);
+                width: 0; 
+                height: 0; 
+                border-top: 6px solid $gris;
+                border-right: 6px solid transparent;
+                border-left: 6px solid transparent;
+            }
         }
     }
 
@@ -340,7 +355,7 @@ svg {
         >div {
             display: flex;
 
-            span {
+            >span {
                 &:nth-child(1) {
                     background-color: $azul1;
                 }
@@ -366,7 +381,7 @@ svg {
         >div {
             display: flex;
 
-            span {
+            >span {
                 &:nth-child(1) {
                     background-color: $Fucsia1;
                 }
