@@ -44,6 +44,7 @@ body {
 }
 
 main {
+    position: relative;
     flex: 1 0 auto;
 }
 
@@ -58,6 +59,11 @@ svg {
     width: 98%;
     height: auto;
     margin: 0 auto;
+}
+
+.adjust-size {
+    flex: 0 0 48%;
+    max-width: 48%;
 }
 
 .outer-loader {
@@ -96,6 +102,27 @@ svg {
     border-top: 2px solid $gris;
 }
 
+.btn svg {
+    width: 25px;
+    display: inline-block;
+}
+
+.btn-personalized {
+    border-color: $amarillo;
+    color: $blanco;
+
+    &:hover, &:active {
+        background-color: $amarillo !important;
+        border-color: $amarillo;
+        box-shadow: none;
+    }
+
+    &:focus {
+        outline: none;
+        box-shadow: none;
+    }
+}
+
 .nav-item {
     &:nth-child(1) {
         border-right: 2px solid $blanco;
@@ -115,6 +142,17 @@ svg {
             margin: 0.3em;
         }
     }
+}
+
+.pointer {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    
+    &:nth-child(1){background-color: $gris}
+    &:nth-child(2){background-color: $lightFucsia}
+    &:nth-child(3){background-color: $azul1}
+        
 }
 
 .segment {
@@ -217,8 +255,6 @@ svg {
     z-index: 1;
     cursor: pointer;
 
-    /** width: 80px; **/
-
     img {
         margin-left: 1.5em;
     }
@@ -235,7 +271,17 @@ svg {
         transform: rotate(-90deg) translateX(-45px) translateY(-55px);
         **/
     }
+    
+    &.no-pointer {
+        cursor: inherit;
+    }
 
+    &.relative {
+        position: relative;
+        width: auto;
+        height: auto;
+        left: 0;
+    }
 }
 
 .modal {
@@ -296,11 +342,11 @@ svg {
 }
 
 .levels {
-    position: absolute;
+    position: fixed;
     width: 260px;
     font-size: 0.8em;
     left: 3rem;
-    bottom: 5px;
+    bottom: 0px;
 
     span {
         min-width: 25%;
@@ -405,6 +451,24 @@ svg {
                 }
             }
 
+        }
+    }
+
+    &.no-fixed {
+        position: relative;
+        width: auto;
+        left: 0;
+    }
+}
+
+
+@media (min-width: 1366px){
+    .btn_modal_rueda {
+        width: 90px;
+
+        span {    
+            padding: 0 0 0 60px;
+            transform: rotate(-90deg) translateX(-40px) translateY(-45px);
         }
     }
 }

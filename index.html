@@ -8,10 +8,160 @@
     <link rel="stylesheet" href="assets/thirdpart/css/bootstrap.min.css">
     <link rel="stylesheet" href="assets/css/master.min.css">
 </head>
-<body>
+<body class="bck1">
     
-    <h1>Página de presentación</h1>
+    <div class="outer-loader">
+        <div class="d-flex flex-column justify-content-center align-items-center">
+            <h4 class="mb-3">Loading...</h4>
+            <div class="spinner-border" role="status">
+            </div>
+        </div>
+    </div>
 
+    <main>
+        <!-- menu -->
+        <div class="container-fluid p-0">
+            <div class="header p-0">
+                <nav class="navbar navbar-expand-lg p-0">
+                    <a class="navbar-brand" href="/">
+                        <img src="assets/img/banner.png" alt="" loading="lazy">
+                    </a>
+                </nav>
+            </div>
+        </div>
+
+        <!-- gráficos -->
+        <div class="container-fluid p-0 d-flex align-items-center mt-4">
+            <div class="container-fluid m-0 p-0">
+                <div class="row py-0 px-5">
+                    <div class="col-sm-3">
+                        <h3>Instrucciones</h3>
+                        <h6>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut fuga eligendi, cum suscipit harum</h6>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus, aspernatur eligendi? Reprehenderit quibusdam fuga cumque officiis minus laboriosam aliquid laborum animi! Repellendus explicabo quo optio molestias totam, animi nobis delectus!Debitis dicta excepturi quidem.</p>
+                    </div>
+                    <div class="col-sm-4 offset-sm-2 mt-n5 p-0 pl-5 pb-4">
+                        <img src="assets/img/rueda_sectores/rueda.png" class="img-fluid" alt="">
+                    </div>
+                    <div class="col-sm-3 mt-5 px-5">
+                        <a href="interactivo.html" class="btn btn-outline-primary btn-personalized mt-5">Comenzar <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-caret-right-fill" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M12.14 8.753l-5.482 4.796c-.646.566-1.658.106-1.658-.753V3.204a1 1 0 0 1 1.659-.753l5.48 4.796a1 1 0 0 1 0 1.506z"/>
+                        </svg></a>
+                    </div>
+                </div>
+                <div class="row py-0 px-5">
+                    <div class="col-sm-3 p-0 pr-4 border-top">
+                        <h5>Lorem ipsum dolor sit amet</h5>
+                        <div class="levels no-fixed">
+                            <div class="row mb-3">
+                                <div class="col-sm-12 colors_inv">
+                                    <div class="indicator">
+                                        <span></span>
+                                        <span></span>
+                                        <span></span>
+                                        <span></span>
+                                    </div>
+                                    <h5 class="m-0">Inversión</h5>
+                                    <p>Los colores son del más claro  a más oscuro en función del grado de inversión que se debe hacer</p>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-sm-12 colors_ges">
+                                    <div class="indicator">
+                                        <span></span>
+                                        <span></span>
+                                        <span></span>
+                                        <span></span>
+                                    </div>
+                                    <h5 class="m-0">Gestión</h5>
+                                    <p>Los colores son del más claro  a más oscuro en función del grado de gestión que se debe hacer</p>
+                                </div>
+                            </div>
+                        </div>                    
+                    </div>
+                    <div class="col-sm-6 mx-2 p-0 px-2 adjust-size border-top">
+                        <div class="row">
+                            <div class="col-sm-4 d-flex align-items-stretch">
+                                <div class="form-check  pt-2">
+                                    <input type="checkbox" name="grupo" id="grupo" class="form-check-input">
+                                    <label for="grupo" class="form-check-label">1. Grupo</label>
+                                </div>
+                            </div>
+                            <div class="col-sm-4 d-flex align-items-stretch">
+                                <div class="form-check  pt-2">
+                                    <input type="checkbox" name="tipo" id="tipo" class="form-check-input">
+                                    <label for="tipo" class="form-check-label">2. Tipo de instrumento</label>
+                                </div>
+                            </div>
+                            <div class="col-sm-4 d-flex align-items-stretch">
+                                <div class="form-check  pt-2">
+                                    <input type="checkbox" name="instrumento" id="instrumento" class="form-check-input">
+                                    <label for="instrumento" class="form-check-label">3. Instrumento</label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-sm-4 d-flex align-items-stretch">
+                                <div class="form-check  pt-2">
+                                    <input type="checkbox" name="requerimiento" id="requerimiento"
+                                        class="form-check-input">
+                                    <label for="requerimiento" class="form-check-label">4. Requerimientos mínimos de
+                                        aplicación</label>
+                                </div>
+                            </div>
+                            <div class="col-sm-4 d-flex align-items-stretch">
+                                <div class="form-check  pt-2">
+                                    <input type="checkbox" name="cuando" id="cuando" class="form-check-input">
+                                    <label for="cuando" class="form-check-label">5. Cuando aplicarlo</label>
+                                </div>
+                            </div>
+                            <div class="col-sm-4 d-flex align-items-stretch">
+                                <div class="form-check  pt-2">
+                                    <input type="checkbox" name="combinar" id="combinar" class="form-check-input">
+                                    <label for="combinar" class="form-check-label">6. Con que instrumentos
+                                        combinar</label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-sm-4 ml-2 p-0 mt-3">
+                                <select class="custom-select">
+                                    <option value="1" selected>1. Grupo</option>
+                                    <option value="2">2. Tipo de instrumento</option>
+                                    <option value="3">3. Instrumento</option>
+                                    <option value="4">4. Requerimientos mínimos de aplicación</option>
+                                    <option value="5">5. Cuando aplicarlo</option>
+                                    <option value="6">6. Con que instrumentos combinar</option>
+                                  </select>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-sm-12 p-0 pl-2 mt-2">
+                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo minima quaerat eum in explicabo est quasi nisi quas. Exercitationem similique optio harum atque. Reprehenderit totam nihil voluptatibus dolor, nam nesciunt.</p>
+                            </div>
+                        </div>
+                        
+                    </div>
+                    <div class="col-sm-3 p-0 pl-2 border-top">
+                        <div class="row">
+                            <div class="col-sm-6 py-3 d-flex justify-content-around align-items-center">
+                                <div class="pointer"></div>
+                                <div class="pointer"></div>
+                                <div class="pointer"></div>
+                            </div>
+                            <div class="col-sm-6 py-3">
+                                <a class="btn_modal_rueda no-pointer relative">
+                                    <span>RUTA</span>
+                                    <img id="img-rueda" src="assets/img/rueda_sectores/rueda_miniatura.png" alt="" class="img-fluid w-100">
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <script src="assets/thirdpart/js/jquery-3.5.1.min.js"></script>
     <script src="assets/thirdpart/js/bootstrap.min.js"></script>
     <script src="assets/js/jsonSVG.js"></script>
     <script src="assets/js/master.js"></script>

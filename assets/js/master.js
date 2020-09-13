@@ -400,6 +400,7 @@ function showInstrument(group, type, instrument) {
     let when = obj["groups"][group]["types"][type]["instruments"][instrument]["when"];
     let which = obj["groups"][group]["types"][type]["instruments"][instrument]["which"];
     toogleTexts(name, definition, requirements, when, which);
+    //changeImage(nameImg);
     hideText();
     setTimeout(
         function () {
@@ -585,4 +586,15 @@ function indicatorState(inv, ges) {
     }
 
    
+}
+
+function checkNavigation(){
+    unchecker(3);
+    fillInstrument();
+    hideText();
+}
+
+function changeImage(nameImg) {
+    let route = "assets/img/rueda_sectores/"+name+".png";
+    $('#img-rueda').attr('src', route);
 }
