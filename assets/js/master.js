@@ -384,12 +384,12 @@ function showType(svg) {
 
 function showTypeInstrument(svg, inv, ges) {
     checker(2);
-    indicatorState(inv, ges);
     hideContents(2);
     loadSVG("#typeInstrument", jsonSVG[svg])
     setTimeout(
         function () {
             showContents(3);
+            indicatorState(inv, ges);
         }, 300);
 }
 
@@ -412,8 +412,8 @@ function showInstrument(group, type, instrument) {
 
 function returnToGroups() {
     unchecker(1);
-    indicatorState(0,0);
     hideText();
+    indicatorState(0,0);
     fillInstrument()
     hideContents();
     setTimeout(
@@ -424,8 +424,8 @@ function returnToGroups() {
 
 function returnToTypesInstrument() {
     unchecker(2);
-    indicatorState(0,0);
     hideText();
+    indicatorState(0,0);
     fillInstrument()
     hideContents(3);
     setTimeout(
@@ -437,7 +437,7 @@ function returnToTypesInstrument() {
 function showContents(opt) {
     switch (opt) {
         case 1:
-            $('body').removeClass('bck1, bck2').addClass('bck1');
+           
             $('#firstLvl svg').removeClass('animate__zoomOut').hide();
             $('#firstLvl div').show();
             setTimeout(
@@ -447,7 +447,7 @@ function showContents(opt) {
             break;
 
         case 2:
-            $('body').removeClass('bck1').addClass('bck2');
+           
             $('#secondLvl svg').removeClass('animate__zoomOut').hide();
             $('#secondLvl div').show();
             setTimeout(
@@ -474,7 +474,7 @@ function showContents(opt) {
 function hideContents(opt) {
     switch (opt) {
         case 1:
-            $('body').removeClass('bck1, bck2').addClass('bck1');
+  
             $('#firstLvl svg').removeClass('animate__zoomIn');
             $('#firstLvl svg').addClass('animate__zoomOut');
             setTimeout(
@@ -484,7 +484,7 @@ function hideContents(opt) {
             break;
 
         case 2:
-            $('body').removeClass('bck1').addClass('bck2');
+
             $('#secondLvl svg').removeClass('animate__zoomIn');
             $('#secondLvl svg').addClass('animate__zoomOut');
             setTimeout(
