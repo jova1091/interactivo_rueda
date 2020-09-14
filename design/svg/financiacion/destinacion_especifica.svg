@@ -1,6 +1,6 @@
-<svg clas="animate__animated" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 734 277.3">
+<svg class="animate__animated" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 734 277.3">
   <g>
-    <g class="hoverable" onclick="returnToTypesInstrument();">
+    <g class="hoverable" onclick="returnToTypesInstrument(); changeImage('financiacion/F_Herramienta_Segundo_Plano');">
       <path d="M453.3,197.7,281.7,171.6a156.9,156.9,0,0,0,1.8-23.8,155,155,0,0,0-4.8-38.5L446.9,66.5a327,327,0,0,1,10.2,81.3A332.3,332.3,0,0,1,453.3,197.7Z" style="fill: #37276e"/>
       <path d="M444.8,196.5,277.7,171.1a148.7,148.7,0,0,0,1.7-23.1,152.4,152.4,0,0,0-4.6-37.6L438.6,68.8a323.6,323.6,0,0,1,9.8,79.2A327.8,327.8,0,0,1,444.8,196.5Z" style="fill: #e27aaf"/>
       <g>
@@ -26,7 +26,7 @@
         <path d="M406.5,157.9v-1.3h-.1a3.9,3.9,0,0,1-3.1,1.5,2.8,2.8,0,0,1-3.1-2.9c0-2.4,2.2-3.8,6.1-3.8v-.2a2.1,2.1,0,0,0-2.3-2.3,6,6,0,0,0-2.7.7l-.4-1.2a7.1,7.1,0,0,1,3.4-.9c3.1,0,3.8,2.1,3.8,4.2v3.8a17.9,17.9,0,0,0,.2,2.4Zm-.3-5.2c-2,0-4.3.3-4.3,2.3a1.7,1.7,0,0,0,1.8,1.8,2.6,2.6,0,0,0,2.4-1.7,1.3,1.3,0,0,0,.1-.6Z" style="fill: #fff"/>
       </g>
     </g>
-    <g class="hoverable" onclick="returnToGroups();">
+    <g class="hoverable" onclick="returnToGroups(); changeImage('rueda');">
       <circle cx="127.5" cy="149.8" r="127" style="fill: none;stroke: #aab8bd;stroke-miterlimit: 10"/>
       <circle cx="127.7" cy="148" r="105" style="fill: #bdc4c6"/>
       <g>

@@ -595,6 +595,6 @@ function checkNavigation(){
 }
 
 function changeImage(nameImg) {
-    let route = "assets/img/rueda_sectores/"+name+".png";
-    $('#img-rueda').attr('src', route);
+    let route = "assets/img/rueda_sectores/"+nameImg+".png";
+    $('#img-rueda-modal').attr('src', route);
 }

@@ -1,6 +1,6 @@
 <svg class="animate__animated" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 734 353.2">
   <g>
-    <g class="hoverable" onclick="returnToTypesInstrument();">
+    <g class="hoverable" onclick="returnToTypesInstrument(); changeImage('economicos/E_Herramienta_Segundo_Plano');">
       <path
         d="M452.4,288,281.2,246.2a159.8,159.8,0,0,0,4.5-37.9,158.2,158.2,0,0,0-8.9-52.5L443.1,97.2A335.5,335.5,0,0,1,462,208.3,332.4,332.4,0,0,1,452.4,288Z"
         style="fill: #332c91" />
@@ -248,7 +248,7 @@
           style="fill: #fff" />
       </g>
     </g>
-    <g class="hoverable" onclick="returnToGroups();">
+    <g class="hoverable" onclick="returnToGroups(); changeImage('rueda');">
       <circle cx="127.5" cy="207.7" r="105" style="fill: #bdc4c6" />
       <circle cx="127.5" cy="207.7" r="127" style="fill: none;stroke: #aab8bd;stroke-miterlimit: 10" />
       <g>

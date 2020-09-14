@@ -111,7 +111,8 @@ svg {
     border-color: $amarillo;
     color: $blanco;
 
-    &:hover, &:active {
+    &:hover,
+    &:active {
         background-color: $amarillo !important;
         border-color: $amarillo;
         box-shadow: none;
@@ -148,11 +149,19 @@ svg {
     width: 30px;
     height: 30px;
     border-radius: 50%;
-    
-    &:nth-child(1){background-color: $gris}
-    &:nth-child(2){background-color: $lightFucsia}
-    &:nth-child(3){background-color: $azul1}
-        
+
+    &:nth-child(1) {
+        background-color: $gris
+    }
+
+    &:nth-child(2) {
+        background-color: $lightFucsia
+    }
+
+    &:nth-child(3) {
+        background-color: $azul1
+    }
+
 }
 
 .segment {
@@ -271,7 +280,7 @@ svg {
         transform: rotate(-90deg) translateX(-45px) translateY(-55px);
         **/
     }
-    
+
     &.no-pointer {
         cursor: inherit;
     }
@@ -461,12 +470,11 @@ svg {
     }
 }
 
-
-@media (min-width: 1366px){
+@media (min-width: 1366px) {
     .btn_modal_rueda {
         width: 90px;
 
-        span {    
+        span {
             padding: 0 0 0 60px;
             transform: rotate(-90deg) translateX(-40px) translateY(-45px);
         }

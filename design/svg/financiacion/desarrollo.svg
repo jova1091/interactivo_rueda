@@ -1,6 +1,6 @@
 <svg class="animate__animated" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 734 277.3">
   <g>
-    <g class="hoverable" onclick="returnToTypesInstrument();">
+    <g class="hoverable" onclick="returnToTypesInstrument(); changeImage('financiacion/F_Herramienta_Segundo_Plano');">
       <path d="M453.3,197.7,281.7,171.6a156.9,156.9,0,0,0,1.8-23.8,155,155,0,0,0-4.8-38.5L446.9,66.5a327,327,0,0,1,10.2,81.3A332.3,332.3,0,0,1,453.3,197.7Z" style="fill: #3f3793"/>
       <path d="M444.8,196.5,277.7,171.1a148.7,148.7,0,0,0,1.7-23.1,152.4,152.4,0,0,0-4.6-37.6L438.6,68.8a323.6,323.6,0,0,1,9.8,79.2A327.8,327.8,0,0,1,444.8,196.5Z" style="fill: #d36caf"/>
       <g>
@@ -16,7 +16,7 @@
         <path d="M416.5,139.1c0,3.8-2.6,5.4-5.1,5.4s-4.8-2-4.8-5.2,2.2-5.4,5-5.4S416.5,136,416.5,139.1Zm-8.1.1c0,2.2,1.3,3.9,3.1,3.9s3.1-1.6,3.1-3.9-.8-3.9-3-3.9S408.4,137.3,408.4,139.2Z" style="fill: #fff"/>
       </g>
     </g>
-    <g class="hoverable" onclick="returnToGroups();">
+    <g class="hoverable" onclick="returnToGroups(); changeImage('rueda');">
       <circle cx="127.5" cy="149.8" r="127" style="fill: none;stroke: #aab8bd;stroke-miterlimit: 10"/>
       <circle cx="127.7" cy="148" r="105" style="fill: #bdc4c6"/>
       <g>

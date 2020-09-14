@@ -205,7 +205,7 @@
           style="fill: #fff" />
       </g>
     </g>
-    <g class="hoverable" onclick="returnToGroups()">
+    <g class="hoverable" onclick="returnToGroups(); changeImage('rueda');">
       <circle cx="127.7" cy="181.9" r="105" style="fill: #bdc4c6" />
       <circle cx="127.5" cy="183.9" r="127" style="fill: none;stroke: #aab8bd;stroke-miterlimit: 10" />
       <g>
@@ -237,7 +237,7 @@
           style="fill: #112025" />
       </g>
     </g>
-    <g class="hoverable" onclick="returnToTypesInstrument()">
+    <g class="hoverable" onclick="returnToTypesInstrument(); changeImage('economicos/E_Herramienta_Segundo_Plano');">
       <path
         d="M458.8,250.1,285.3,212.3a159.3,159.3,0,0,0-5.3-80.7L448.8,75.4A337.7,337.7,0,0,1,466,182.1C466,203.5,462.8,229.3,458.8,250.1Z"
         style="fill: #266ec4" />
