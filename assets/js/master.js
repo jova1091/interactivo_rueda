@@ -364,6 +364,11 @@ $(document).ready(function () {
     $('.easyzoom').easyZoom({
         preventClicks: false
     });
+    
+    $('.easyzoom').hover(function(){
+        let routeimg = $('#img-rueda-modal').attr('src');
+        $('.easyzoom-flyout img').attr('src', routeimg);
+    })
 
     let angle = 0;
     $('.easyzoom').click(function(){
