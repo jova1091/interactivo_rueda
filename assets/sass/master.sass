@@ -470,7 +470,37 @@ svg {
     }
 }
 
-@media (min-width: 1366px) {
+
+.easyzoom {
+    display: inline-block;
+    overflow: hidden;
+
+    img {
+        vertical-align: bottom;
+    }
+}
+
+.easyzoom:hover:after {
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: black;
+    z-index: 0;
+}
+
+.easyzoom-flyout {
+    position: absolute;
+    z-index: 1;
+
+    img {
+        transition: transform 1s;
+    }
+}
+
+@media (max-width: 1366px) {
     .btn_modal_rueda {
         width: 90px;
 
