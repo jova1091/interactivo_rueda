@@ -348,11 +348,28 @@ $(document).ready(function () {
     indicatorState(0, 0);
     $('#groups').load(jsonSVG.groups)
     $('.outer-loader').delay(1000).fadeOut('slow');
+
+    
+
+    // EasyZoom para zoom de imagen en modal https://i-like-robots.github.io/EasyZoom/
+    $('.easyzoom').easyZoom({
+        preventClicks: false
+    });
+    
+    $('.easyzoom').hover(function(){
+        let routeimg = $('#img-rueda-modal').attr('src');
+        $('.easyzoom-flyout img').attr('src', routeimg);
+    })
+
+    let angle = 0;
+    $('.easyzoom').click(function(){
+        angle += 15;
+        $('.easyzoom-flyout img').css('transform', 'rotate('+angle+'deg)')
+    })
 });
 
 function know_resolution () {
     let widthScreen = screen.width;
-    console.log(widthScreen);
 
     if (widthScreen <= 1280) {
         $('#thirdLvl > div:nth-child(1) div ').removeClass('px-5');
@@ -587,5 +604,6 @@ function checkNavigation(){
 
 function changeImage(nameImg) {
     let route = "assets/img/rueda_sectores/"+nameImg+".png";
+    $('#a-rueda-modal').attr('href', route);
     $('#img-rueda-modal').attr('src', route);
 }
