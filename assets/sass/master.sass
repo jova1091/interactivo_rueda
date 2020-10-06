@@ -229,7 +229,8 @@ svg {
     max-height: 32vh;
 
     span {
-        max-height: 22vh;
+        margin-top: 10px;
+        max-height: 19vh;
         display: block;
         overflow: auto;
 
@@ -252,6 +253,18 @@ svg {
             background-color: $amarillo;
             outline: 0px;
         }
+    }
+}
+
+#text4 {
+    span {
+        max-height: 16vh !important;
+    }
+}
+
+#text5 {
+    span {
+        margin-top: none !important
     }
 }
 
@@ -319,6 +332,40 @@ svg {
         &:focus,
         &:hover {
             outline: none;
+            font-weight: 200;
+        }
+    }
+}
+
+.modal_info {
+    border: 0;
+    color: $negro;
+
+    .modal-header {
+        border-bottom: 0px;
+    }
+
+    .modal-body {
+        max-height: 90vh;
+        overflow: auto;
+        a {
+            word-break: break-all;
+        }
+    }
+
+    .close {
+        color: $negro;
+        font-size: 5rem;
+        font-weight: 100;
+        text-shadow: 0 0 transparent;
+        opacity: .7;
+        position: absolute;
+        right: 1rem;
+        top: 0rem;
+        z-index: 1000;
+
+        &:focus,
+        &:hover {
             font-weight: 200;
         }
     }
