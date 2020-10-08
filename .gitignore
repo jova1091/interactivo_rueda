@@ -1,1 +1,5 @@
 assets/sass/master.sass
+*.ai
+mockup.pdf
+.vscode
+.pleeeaserc

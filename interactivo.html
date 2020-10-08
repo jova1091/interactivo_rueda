@@ -31,8 +31,8 @@
                     </a>
                     <div class="collapse navbar-collapse d-flex justify-content-end" id="navbarSupportedContent">
                         <ul class="navbar-nav mr-5">
-                            <li class="nav-item active">
-                                <a class="nav-link d-flex align-items-baseline" href="/"><img
+                            <li class="nav-item">
+                                <a class="nav-link d-flex align-items-baseline" href="index.html"><img
                                         src="assets/img/icons/icon-home.png" alt="home"> Inicio</a>
                             </li>
                             <li class="nav-item">
@@ -40,8 +40,9 @@
                                         src="assets/img/icons/icon-pdf.png" alt="Descargar"></a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link d-flex align-items-baseline" href="#" data-toggle="modal" data-target="#modal_info">Sitios Web Consultados<img
-                                    src="assets/img/icons/icon-pdf.png" alt="Descargar"></a>
+                                <a class="nav-link d-flex align-items-baseline" href="#" data-toggle="modal"
+                                    data-target="#modal_info">Sitios Web Consultados<img
+                                        src="assets/img/icons/icon-pdf.png" alt="Descargar"></a>
                             </li>
                         </ul>
                     </div>
@@ -52,19 +53,22 @@
                         <div class="row">
                             <div class="col-sm-2 d-flex align-items-stretch">
                                 <div class="form-check segment pt-2">
-                                    <input type="checkbox" name="grupo" id="grupo" class="form-check-input" onclick="returnToGroups()">
+                                    <input type="checkbox" name="grupo" id="grupo" class="form-check-input"
+                                        onclick="returnToGroups()">
                                     <label for="grupo" class="form-check-label">1. Grupo</label>
                                 </div>
                             </div>
                             <div class="col-sm-2 d-flex align-items-stretch">
                                 <div class="form-check segment pt-2">
-                                    <input type="checkbox" name="tipo" id="tipo" class="form-check-input" onclick="returnToTypesInstrument()">
+                                    <input type="checkbox" name="tipo" id="tipo" class="form-check-input"
+                                        onclick="returnToTypesInstrument()">
                                     <label for="tipo" class="form-check-label">2. Tipo de instrumento</label>
                                 </div>
                             </div>
                             <div class="col-sm-2 d-flex align-items-stretch">
                                 <div class="form-check segment pt-2">
-                                    <input type="checkbox" name="instrumento" id="instrumento" class="form-check-input" onclick="returnToTypesInstrument()">
+                                    <input type="checkbox" name="instrumento" id="instrumento" class="form-check-input"
+                                        onclick="returnToTypesInstrument()">
                                     <label for="instrumento" class="form-check-label">3. Instrumento</label>
                                 </div>
                             </div>
@@ -78,13 +82,15 @@
                             </div>
                             <div class="col-sm-2 d-flex align-items-stretch">
                                 <div class="form-check segment pt-2">
-                                    <input type="checkbox" name="cuando" id="cuando" class="form-check-input" onclick="checkNavigation()">
+                                    <input type="checkbox" name="cuando" id="cuando" class="form-check-input"
+                                        onclick="checkNavigation()">
                                     <label for="cuando" class="form-check-label">5. Cuando aplicarlo</label>
                                 </div>
                             </div>
                             <div class="col-sm-2 d-flex align-items-stretch">
                                 <div class="form-check segment pt-2">
-                                    <input type="checkbox" name="combinar" id="combinar" class="form-check-input" onclick="checkNavigation()">
+                                    <input type="checkbox" name="combinar" id="combinar" class="form-check-input"
+                                        onclick="checkNavigation()">
                                     <label for="combinar" class="form-check-label">6. Con que instrumentos
                                         combinar</label>
                                 </div>
@@ -101,7 +107,8 @@
                 <div class="col-sm-12 py-0 px-5">
                     <a class="btn_modal_rueda" data-toggle="modal" data-target="#modal_rueda">
                         <span>RUTA</span>
-                        <img id="img-rueda" src="assets/img/rueda_sectores/rueda_miniatura.png" alt="" class="img-fluid w-100">
+                        <img id="img-rueda" src="assets/img/rueda_sectores/rueda_miniatura.png" alt=""
+                            class="img-fluid w-100">
                     </a>
 
                     <div id="firstLvl" class="row d-flex align-items-center">
@@ -132,32 +139,34 @@
                                     <p id="text1" class="m-0 p-3 bck-azul1 animate__animated ">
                                         <b id="instrument"></b>
                                         <span>
-                                            <b>Definición: </b><span id="definition" class="pr-2 scroll-inverted"></span>
+                                            <b>Definición: </b><span id="definition"
+                                                class="pr-2 scroll-inverted"></span>
                                         </span>
                                     </p>
                                 </div>
                                 <div class="col-sm-4 d-flex align-items-stretch">
-                                    <p id="text3" class="m-0 p-4 bck-morado1 animate__animated animate__delay-2s ">
+                                    <p id="text3" class="m-0 p-4 bck-morado1 animate__animated animate__delay-1s ">
                                         <b>¿En qué contexto usarlo?</b> <br>
                                         <span id="context" class="pr-2 scroll-inverted"></span>
                                     </p>
                                 </div>
                                 <div class="col-sm-4 d-flex align-items-stretch">
-                                    <p id="text2" class="m-0 p-4 bck-morado1 animate__animated animate__delay-2s ">
+                                    <p id="text2" class="m-0 p-4 bck-morado1 animate__animated animate__delay-1s ">
                                         <b>Requerimientos mínimos:</b> <br>
                                         <span id="requirements" class="pr-2 scroll-inverted"></span>
                                     </p>
                                 </div>
                                 <div class="col-sm-4 d-flex align-items-stretch">
-                                    <p id="text4" class="m-0 p-4 bck-morado2 animate__animated animate__delay-2s ">
+                                    <p id="text4" class="m-0 p-4 bck-morado2 animate__animated animate__delay-1s ">
                                         <b>¿Con qué instrumentos se puede combinar?</b> <br>
                                         <span id="which" class="pr-2 scroll-inverted"></span>
                                     </p>
                                 </div>
                                 <div class="col-sm-12 mt-4">
-                                    <p id="text5" class="m-0 p-3 bck-azul2 animate__animated animate__delay-3s ">
-                                        <b>Instituciones o dependencias del orden nacional o local relacionadas con su formulación y aplicación:</b>
-                                            <span id="institutions" class="pr-2"></span>
+                                    <p id="text5" class="m-0 p-3 bck-azul2 animate__animated animate__delay-2s ">
+                                        <b>Instituciones o dependencias del orden nacional o local relacionadas con su
+                                            formulación y aplicación:</b>
+                                        <span id="institutions" class="pr-2"></span>
                                     </p>
                                 </div>
                             </div>
@@ -178,7 +187,7 @@
                     <span></span>
                 </div>
                 <h5 class="m-0">Inversión</h5>
-                <p>Los colores son del más claro  a más oscuro en función del grado de inversión que se debe hacer</p>
+                <p>Los colores son del más claro a más oscuro en función del grado de inversión que se debe hacer</p>
             </div>
         </div>
         <div class="row">
@@ -190,7 +199,7 @@
                     <span></span>
                 </div>
                 <h5 class="m-0">Gestión</h5>
-                <p>Los colores son del más claro  a más oscuro en función del grado de gestión que se debe hacer</p>
+                <p>Los colores son del más claro a más oscuro en función del grado de gestión que se debe hacer</p>
             </div>
         </div>
     </div>
@@ -218,11 +227,14 @@
                     <div class="row">
                         <div class="col-sm-8 offset-sm-2 easyzoom">
                             <a id="a-rueda-modal" href="assets/img/rueda_sectores/rueda.png">
-                                <img id="img-rueda-modal" src="assets/img/rueda_sectores/rueda.png" alt="" class="img-fluid w-100">
+                                <img id="img-rueda-modal" src="assets/img/rueda_sectores/rueda.png" alt=""
+                                    class="img-fluid w-100">
                             </a>
                         </div>
                         <div class="col-sm-10 offset-sm-1 pt-3">
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat, asperiores at exercitationem modi voluptates necessitatibus rerum neque repellat excepturi doloremque iusto optio aspernatur laborum! Aliquid dicta saepe et ex aliquam!</p>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat, asperiores at
+                                exercitationem modi voluptates necessitatibus rerum neque repellat excepturi doloremque
+                                iusto optio aspernatur laborum! Aliquid dicta saepe et ex aliquam!</p>
                         </div>
                     </div>
                 </div>
@@ -242,31 +254,147 @@
                         <div class="col-sm-10 offset-sm-1 pt-3">
                             <h2 class="mb-4">Documentos y sitios web consultados:</h2>
                             <ul>
-                                <li>[1] Cámara de Comercio: Desarrollo urbano y regional. ¿Qué son los planes parciales? En: <a href="https://www.ccb.org.co/Preguntas-frecuentes/Transformar-Bogota-Articulacion-publico-privada/Desarrollo-Urbano-y-Regional/Que-son-los-Planes-Parciales" target="_blank" rel="noopener noreferrer">https://www.ccb.org.co/Preguntas-frecuentes/Transformar-Bogota-Articulacion-publico-privada/Desarrollo-Urbano-y-Regional/Que-son-los-Planes-Parciales</a></li>
-                                <li>[2] Ministerio de Vivienda, Gestión del POT: instrumentos. En: <a href="http://www.minvivienda.gov.co/POTPresentacionesGuias/Instrumentos%20de%20gestion%20POT.pdf" target="_blank" rel="noopener noreferrer">http://www.minvivienda.gov.co/POTPresentacionesGuias/Instrumentos%20de%20gestion%20POT.pdf</a>.</li>
-                                <li>[3] Empresa de Desarrollo Urbano de Barranquilla S.A.  Unidades de actuación urbanística. En: <a href="https://www.edubar.com.co/unidades-de-actuacion-urbanistica-u-a-u/#:~:text=La%20Unidad%20de%20Actuaci%C3%B3n%20Urban%C3%ADstica,de%20renovaci%C3%B3n%20urbana%20o%20redesarrollo" target="_blank" rel="noopener noreferrer">https://www.edubar.com.co/unidades-de-actuacion-urbanistica-u-a-u/#:~:text=La%20Unidad%20de%20Actuaci%C3%B3n%20Urban%C3%ADstica,de%20renovaci%C3%B3n%20urbana%20o%20redesarrollo</a>.</li>
-                                <li>[4] Caja de Vivienda Popular. Enajenación voluntaria de inmuebles. En: <a href="https://www.cajaviviendapopular.gov.co/files/Servicio-al-ciudadano/Tramites-servicios/2-Tramites2.pdf" target="_blank" rel="noopener noreferrer">https://www.cajaviviendapopular.gov.co/files/Servicio-al-ciudadano/Tramites-servicios/2-Tramites2.pdf</a></li>
-                                <li>[5] Legis. ¿Cuáles son las diferencias entre la expropiación judicial y la administrativa de inmuebles? En: <a href="https://www.ambitojuridico.com/noticias/administrativo/administrativo-y-contratacion/cuales-son-las-diferencias-entre-la" target="_blank" rel="noopener noreferrer">https://www.ambitojuridico.com/noticias/administrativo/administrativo-y-contratacion/cuales-son-las-diferencias-entre-la</a>.</li>
-                                <li>[6] Secretaría Distrital del Hábitat (Bogotá). Declaratorias de Desarrollo y Construcción Prioritaria. En: <a href="http://historico1.habitatbogota.gov.co/index.php/proyectos-asociativos-y-declaratorias/declaratorias-de-desarrollo-y-construccion-prioritaria" target="_blank" rel="noopener noreferrer">http://historico1.habitatbogota.gov.co/index.php/proyectos-asociativos-y-declaratorias/declaratorias-de-desarrollo-y-construccion-prioritaria</a>.</li>
-                                <li>[7] Sánchez, R. M. (2012). Incentivos económicos para la conservación, un marco conceptual. Lima, Perú: Deposito legal de la biblioteca nacional del Perú. En: <a href="https://www.researchgate.net/publication/265051683_INCENTIVOS_ECONOMICOS_PARA_LA_CONSERVACION_UN_MARCO_CONCEPTUA" target="_blank" rel="noopener noreferrer">https://www.researchgate.net/publication/265051683_INCENTIVOS_ECONOMICOS_PARA_LA_CONSERVACION_UN_MARCO_CONCEPTUA</a>.</li>
-                                <li>[8] Departamento Nacional de Planeación −DNP (2015). Cuenta de Actividades Ambientales e Impuestos relacionados con el medio ambiente. <a href="https://www.dane.gov.co/files/investigaciones/pib/ambientales/cuentas_ambientales/cuenta-gasto-actividades-e-impuestos-medio-ambiente/Pres_gasto_act_amb_2014pr.pdf" target="_blank" rel="noopener noreferrer">https://www.dane.gov.co/files/investigaciones/pib/ambientales/cuentas_ambientales/cuenta-gasto-actividades-e-impuestos-medio-ambiente/Pres_gasto_act_amb_2014pr.pdf</a>.</li>
-                                <li>[9] Parques Nacionales Naturales de Colombia. Compensaciones ambientales e inversión forzosa del 1% como herramienta de gestión de las áreas protegidas del SINAP. En: <a href="http://www.parquesnacionales.gov.co/portal/es/sistema-nacional-de-areas-protegidas-sinap/compensaciones-ambientales-e-inversion-forzosa-del-1/" target="_blank" rel="noopener noreferrer">http://www.parquesnacionales.gov.co/portal/es/sistema-nacional-de-areas-protegidas-sinap/compensaciones-ambientales-e-inversion-forzosa-del-1/</a>.</li>
-                                <li>[10] Ministerio de Ambiente y Desarrollo Sostenible. Manual de Compensaciones del Componente Biótico. En: <a href="http://portal.anla.gov.co/sites/default/files/comunicaciones/Manuales/manual_de_compensaciones_del_componente_biotico_2018.pdf" target="_blank" rel="noopener noreferrer">http://portal.anla.gov.co/sites/default/files/comunicaciones/Manuales/manual_de_compensaciones_del_componente_biotico_2018.pdf</a>.</li>
-                                <li>[11] Contraloría General de la Nación (2018). Revista Economía Colombiana, 351, Subsidios y eficiencia del gasto. En: <a href="https://www.contraloria.gov.co/documents/20181/1033342/REC351_webint.pdf/11220f59-1c00-4a2f-a936-833413d612b4" target="_blank" rel="noopener noreferrer">https://www.contraloria.gov.co/documents/20181/1033342/REC351_webint.pdf/11220f59-1c00-4a2f-a936-833413d612b4</a>.</li>
-                                <li>[12] Ministerio de Agricultura. Certificado de Incentivo Forestal (CIF) 2020. En: <a href="https://www.minagricultura.gov.co/tramites-servicios/apoyos-incentivos/Paginas/Certificado-de-Incentivo-Forestal-CIF-2020.aspx#tabs-1b" target="_blank" rel="noopener noreferrer">https://www.minagricultura.gov.co/tramites-servicios/apoyos-incentivos/Paginas/Certificado-de-Incentivo-Forestal-CIF-2020.aspx#tabs-1b</a>.</li>
-                                <li>[13] Consejo Empresarial Colombiano para el Desarrollo Sostenible (CECODES). Bonos Verdes para el Desarrollo Sostenible en Colombia. En: <a href="https://www.cecodes.org.co/site/bonos-verdes-para-el-desarrollo-sostenible-en-colombia/" target="_blank" rel="noopener noreferrer">https://www.cecodes.org.co/site/bonos-verdes-para-el-desarrollo-sostenible-en-colombia/</a>.</li>
-                                <li>[14] Montejo, L. (2018) Bonos Verdes en Colombia. asuntos:legales – Consultorio. En: <a href="https://www.asuntoslegales.com.co/consultorio/bonos-verdes-en-colombia-2709364" target="_blank" rel="noopener noreferrer">https://www.asuntoslegales.com.co/consultorio/bonos-verdes-en-colombia-2709364</a>.</li>
-                                <li>[15] Asobancaria (2018). Bonos verdes, una alternativa al financiamiento climático. Revista Semana Económica, Ed. 1158. En: <a href="http://www.asobancaria.com/wp-content/uploads/1158.pdf" target="_blank" rel="noopener noreferrer"> http://www.asobancaria.com/wp-content/uploads/1158.pdf</a>.</li>
-                                <li>[16] Banco Interamericano de Desarrollo (BID). Iniciativa Alianza Latinoamericana de Fondos de Agua. En: <a href="https://www.iadb.org/es/sectores/agua-y-saneamiento/fondos-de-agua/inicio" target="_blank" rel="noopener noreferrer">https://www.iadb.org/es/sectores/agua-y-saneamiento/fondos-de-agua/inicio</a>.</li>
-                                <li>[17] Comunidad de práctica 'Ciencia para la Adaptación' (Instituto de Montaña y CIIFEN). Marco Legal para la Creación de un Fondo de Agua en Colombia. En: <a href="http://www.para-agua.net/extras/fondos/3._Marco_Legal_Colombia.pdf" target="_blank" rel="noopener noreferrer">http://www.para-agua.net/extras/fondos/3._Marco_Legal_Colombia.pdf</a>.</li>
-                                <li>[18] Moreno, P. (2016). Manejo Integral de Cuencas Hidrográficas en el Valle Geográfico Alto del río Cauca. Fondo Agua por la Vida y la Sostenibilidad. En: <a href="https://www.asocana.org/documentos/2642016-1637CC45-00FF00,000A000,878787,C3C3C3,0F0F0F,B4B4B4,FF00FF,FFFFFF,2D2D2D,A3C4B5,D2D2D2.pdf" target="_blank" rel="noopener noreferrer">https://www.asocana.org/documentos/2642016-1637CC45-00FF00,000A000,878787,C3C3C3,0F0F0F,B4B4B4,FF00FF,FFFFFF,2D2D2D,A3C4B5,D2D2D2.pdf</a>.</li>
-                                <li>[19] Programa de las Naciones Unidas para el Desarrollo (PNUD) - Grupo Interinstitucional de Herramientas de Conservación Privada (G5), Exención predial por conservación: Guía metodológica para su aplicación en municipios, 2014: <a href="https://es.search.yahoo.com/search?fr=mcafee&type=E211ES885G0&p=PNUD" target="_blank" rel="noopener noreferrer">https://es.search.yahoo.com/search?fr=mcafee&type=E211ES885G0&p=PNUD</a>.</li>
-                                <li>[20] Ministerio de Vivienda (2002). Decreto 1337. En: <a href="http://www.minvivienda.gov.co/Decretos%20Vivienda/1337%20-%202002.pdf" target="_blank" rel="noopener noreferrer">http://www.minvivienda.gov.co/Decretos%20Vivienda/1337%20-%202002.pdf</a>.</li>
-                                <li>[21] Ministerio de Ambiente y Desarrollo Sostenible. ¿Qué son los negocios verdes? En: <a href="https://www.minambiente.gov.co/index.php/component/content/article/1381-plantilla-negocios-verdes-y-sostenibles-38" target="_blank" rel="noopener noreferrer">https://www.minambiente.gov.co/index.php/component/content/article/1381-plantilla-negocios-verdes-y-sostenibles-38</a>.</li>
-                                <li>[22] Ministerio de Ambiente y Desarrollo Sostenible. REDD+. En: <a href="https://www.minambiente.gov.co/index.php/component/content/article?id=439:plantilla-bosques-biodiversidad-y-servicios-ecosistematicos-32" target="_blank" rel="noopener noreferrer">https://www.minambiente.gov.co/index.php/component/content/article?id=439:plantilla-bosques-biodiversidad-y-servicios-ecosistematicos-32</a>.</li>
-                                <li>[23] Ministerio de Ambiente y Desarrollo Sostenible. REDD+ Conozca qué es el Mercado Voluntario de Carbono - Redd+. En: <a href="https://www.minambiente.gov.co/index.php/bosques-biodiversidad-y-servicios-ecosistematicos/reduccion-de-emisiones-de-gases/conozca-que-es-el-mercado-del-carbono" target="_blank" rel="noopener noreferrer">https://www.minambiente.gov.co/index.php/bosques-biodiversidad-y-servicios-ecosistematicos/reduccion-de-emisiones-de-gases/conozca-que-es-el-mercado-del-carbono</a>.</li>
-                                <li>[24] Fondo Global para el Medio Ambiente (Global Environmental Facility: GEF), PNUD. (2014). Orientaciones para el diseño de instrumentos para la conservación de la biodiversidad y los servicios ecosistémicos. Bogotá: El Bando Creativo, TNC, WWF.</li>
-                                <li>[25] El negocio fiduciario en Colombia: conceptos básicos. En: <a href="https://www.asofiduciarias.org.co/wp-content/uploads/2017/12/Aspectos-Basicos-del-Negocio-Fiduciario-AF-DIC-2015.pdf" target="_blank" rel="noopener noreferrer">https://www.asofiduciarias.org.co/wp-content/uploads/2017/12/Aspectos-Basicos-del-Negocio-Fiduciario-AF-DIC-2015.pdf</a>.</li>
+                                <li>[1] Cámara de Comercio: Desarrollo urbano y regional. ¿Qué son los planes parciales?
+                                    En: <a
+                                        href="https://www.ccb.org.co/Preguntas-frecuentes/Transformar-Bogota-Articulacion-publico-privada/Desarrollo-Urbano-y-Regional/Que-son-los-Planes-Parciales"
+                                        target="_blank"
+                                        rel="noopener noreferrer">https://www.ccb.org.co/Preguntas-frecuentes/Transformar-Bogota-Articulacion-publico-privada/Desarrollo-Urbano-y-Regional/Que-son-los-Planes-Parciales</a>
+                                </li>
+                                <li>[2] Ministerio de Vivienda, Gestión del POT: instrumentos. En: <a
+                                        href="http://www.minvivienda.gov.co/POTPresentacionesGuias/Instrumentos%20de%20gestion%20POT.pdf"
+                                        target="_blank"
+                                        rel="noopener noreferrer">http://www.minvivienda.gov.co/POTPresentacionesGuias/Instrumentos%20de%20gestion%20POT.pdf</a>.
+                                </li>
+                                <li>[3] Empresa de Desarrollo Urbano de Barranquilla S.A. Unidades de actuación
+                                    urbanística. En: <a
+                                        href="https://www.edubar.com.co/unidades-de-actuacion-urbanistica-u-a-u/#:~:text=La%20Unidad%20de%20Actuaci%C3%B3n%20Urban%C3%ADstica,de%20renovaci%C3%B3n%20urbana%20o%20redesarrollo"
+                                        target="_blank"
+                                        rel="noopener noreferrer">https://www.edubar.com.co/unidades-de-actuacion-urbanistica-u-a-u/#:~:text=La%20Unidad%20de%20Actuaci%C3%B3n%20Urban%C3%ADstica,de%20renovaci%C3%B3n%20urbana%20o%20redesarrollo</a>.
+                                </li>
+                                <li>[4] Caja de Vivienda Popular. Enajenación voluntaria de inmuebles. En: <a
+                                        href="https://www.cajaviviendapopular.gov.co/files/Servicio-al-ciudadano/Tramites-servicios/2-Tramites2.pdf"
+                                        target="_blank"
+                                        rel="noopener noreferrer">https://www.cajaviviendapopular.gov.co/files/Servicio-al-ciudadano/Tramites-servicios/2-Tramites2.pdf</a>
+                                </li>
+                                <li>[5] Legis. ¿Cuáles son las diferencias entre la expropiación judicial y la
+                                    administrativa de inmuebles? En: <a
+                                        href="https://www.ambitojuridico.com/noticias/administrativo/administrativo-y-contratacion/cuales-son-las-diferencias-entre-la"
+                                        target="_blank"
+                                        rel="noopener noreferrer">https://www.ambitojuridico.com/noticias/administrativo/administrativo-y-contratacion/cuales-son-las-diferencias-entre-la</a>.
+                                </li>
+                                <li>[6] Secretaría Distrital del Hábitat (Bogotá). Declaratorias de Desarrollo y
+                                    Construcción Prioritaria. En: <a
+                                        href="http://historico1.habitatbogota.gov.co/index.php/proyectos-asociativos-y-declaratorias/declaratorias-de-desarrollo-y-construccion-prioritaria"
+                                        target="_blank"
+                                        rel="noopener noreferrer">http://historico1.habitatbogota.gov.co/index.php/proyectos-asociativos-y-declaratorias/declaratorias-de-desarrollo-y-construccion-prioritaria</a>.
+                                </li>
+                                <li>[7] Sánchez, R. M. (2012). Incentivos económicos para la conservación, un marco
+                                    conceptual. Lima, Perú: Deposito legal de la biblioteca nacional del Perú. En: <a
+                                        href="https://www.researchgate.net/publication/265051683_INCENTIVOS_ECONOMICOS_PARA_LA_CONSERVACION_UN_MARCO_CONCEPTUA"
+                                        target="_blank"
+                                        rel="noopener noreferrer">https://www.researchgate.net/publication/265051683_INCENTIVOS_ECONOMICOS_PARA_LA_CONSERVACION_UN_MARCO_CONCEPTUA</a>.
+                                </li>
+                                <li>[8] Departamento Nacional de Planeación −DNP (2015). Cuenta de Actividades
+                                    Ambientales e Impuestos relacionados con el medio ambiente. <a
+                                        href="https://www.dane.gov.co/files/investigaciones/pib/ambientales/cuentas_ambientales/cuenta-gasto-actividades-e-impuestos-medio-ambiente/Pres_gasto_act_amb_2014pr.pdf"
+                                        target="_blank"
+                                        rel="noopener noreferrer">https://www.dane.gov.co/files/investigaciones/pib/ambientales/cuentas_ambientales/cuenta-gasto-actividades-e-impuestos-medio-ambiente/Pres_gasto_act_amb_2014pr.pdf</a>.
+                                </li>
+                                <li>[9] Parques Nacionales Naturales de Colombia. Compensaciones ambientales e inversión
+                                    forzosa del 1% como herramienta de gestión de las áreas protegidas del SINAP. En: <a
+                                        href="http://www.parquesnacionales.gov.co/portal/es/sistema-nacional-de-areas-protegidas-sinap/compensaciones-ambientales-e-inversion-forzosa-del-1/"
+                                        target="_blank"
+                                        rel="noopener noreferrer">http://www.parquesnacionales.gov.co/portal/es/sistema-nacional-de-areas-protegidas-sinap/compensaciones-ambientales-e-inversion-forzosa-del-1/</a>.
+                                </li>
+                                <li>[10] Ministerio de Ambiente y Desarrollo Sostenible. Manual de Compensaciones del
+                                    Componente Biótico. En: <a
+                                        href="http://portal.anla.gov.co/sites/default/files/comunicaciones/Manuales/manual_de_compensaciones_del_componente_biotico_2018.pdf"
+                                        target="_blank"
+                                        rel="noopener noreferrer">http://portal.anla.gov.co/sites/default/files/comunicaciones/Manuales/manual_de_compensaciones_del_componente_biotico_2018.pdf</a>.
+                                </li>
+                                <li>[11] Contraloría General de la Nación (2018). Revista Economía Colombiana, 351,
+                                    Subsidios y eficiencia del gasto. En: <a
+                                        href="https://www.contraloria.gov.co/documents/20181/1033342/REC351_webint.pdf/11220f59-1c00-4a2f-a936-833413d612b4"
+                                        target="_blank"
+                                        rel="noopener noreferrer">https://www.contraloria.gov.co/documents/20181/1033342/REC351_webint.pdf/11220f59-1c00-4a2f-a936-833413d612b4</a>.
+                                </li>
+                                <li>[12] Ministerio de Agricultura. Certificado de Incentivo Forestal (CIF) 2020. En: <a
+                                        href="https://www.minagricultura.gov.co/tramites-servicios/apoyos-incentivos/Paginas/Certificado-de-Incentivo-Forestal-CIF-2020.aspx#tabs-1b"
+                                        target="_blank"
+                                        rel="noopener noreferrer">https://www.minagricultura.gov.co/tramites-servicios/apoyos-incentivos/Paginas/Certificado-de-Incentivo-Forestal-CIF-2020.aspx#tabs-1b</a>.
+                                </li>
+                                <li>[13] Consejo Empresarial Colombiano para el Desarrollo Sostenible (CECODES). Bonos
+                                    Verdes para el Desarrollo Sostenible en Colombia. En: <a
+                                        href="https://www.cecodes.org.co/site/bonos-verdes-para-el-desarrollo-sostenible-en-colombia/"
+                                        target="_blank"
+                                        rel="noopener noreferrer">https://www.cecodes.org.co/site/bonos-verdes-para-el-desarrollo-sostenible-en-colombia/</a>.
+                                </li>
+                                <li>[14] Montejo, L. (2018) Bonos Verdes en Colombia. asuntos:legales – Consultorio. En:
+                                    <a href="https://www.asuntoslegales.com.co/consultorio/bonos-verdes-en-colombia-2709364"
+                                        target="_blank"
+                                        rel="noopener noreferrer">https://www.asuntoslegales.com.co/consultorio/bonos-verdes-en-colombia-2709364</a>.
+                                </li>
+                                <li>[15] Asobancaria (2018). Bonos verdes, una alternativa al financiamiento climático.
+                                    Revista Semana Económica, Ed. 1158. En: <a
+                                        href="http://www.asobancaria.com/wp-content/uploads/1158.pdf" target="_blank"
+                                        rel="noopener noreferrer">
+                                        http://www.asobancaria.com/wp-content/uploads/1158.pdf</a>.</li>
+                                <li>[16] Banco Interamericano de Desarrollo (BID). Iniciativa Alianza Latinoamericana de
+                                    Fondos de Agua. En: <a
+                                        href="https://www.iadb.org/es/sectores/agua-y-saneamiento/fondos-de-agua/inicio"
+                                        target="_blank"
+                                        rel="noopener noreferrer">https://www.iadb.org/es/sectores/agua-y-saneamiento/fondos-de-agua/inicio</a>.
+                                </li>
+                                <li>[17] Comunidad de práctica 'Ciencia para la Adaptación' (Instituto de Montaña y
+                                    CIIFEN). Marco Legal para la Creación de un Fondo de Agua en Colombia. En: <a
+                                        href="http://www.para-agua.net/extras/fondos/3._Marco_Legal_Colombia.pdf"
+                                        target="_blank"
+                                        rel="noopener noreferrer">http://www.para-agua.net/extras/fondos/3._Marco_Legal_Colombia.pdf</a>.
+                                </li>
+                                <li>[18] Moreno, P. (2016). Manejo Integral de Cuencas Hidrográficas en el Valle
+                                    Geográfico Alto del río Cauca. Fondo Agua por la Vida y la Sostenibilidad. En: <a
+                                        href="https://www.asocana.org/documentos/2642016-1637CC45-00FF00,000A000,878787,C3C3C3,0F0F0F,B4B4B4,FF00FF,FFFFFF,2D2D2D,A3C4B5,D2D2D2.pdf"
+                                        target="_blank"
+                                        rel="noopener noreferrer">https://www.asocana.org/documentos/2642016-1637CC45-00FF00,000A000,878787,C3C3C3,0F0F0F,B4B4B4,FF00FF,FFFFFF,2D2D2D,A3C4B5,D2D2D2.pdf</a>.
+                                </li>
+                                <li>[19] Programa de las Naciones Unidas para el Desarrollo (PNUD) - Grupo
+                                    Interinstitucional de Herramientas de Conservación Privada (G5), Exención predial
+                                    por conservación: Guía metodológica para su aplicación en municipios, 2014: <a
+                                        href="https://es.search.yahoo.com/search?fr=mcafee&type=E211ES885G0&p=PNUD"
+                                        target="_blank"
+                                        rel="noopener noreferrer">https://es.search.yahoo.com/search?fr=mcafee&type=E211ES885G0&p=PNUD</a>.
+                                </li>
+                                <li>[20] Ministerio de Vivienda (2002). Decreto 1337. En: <a
+                                        href="http://www.minvivienda.gov.co/Decretos%20Vivienda/1337%20-%202002.pdf"
+                                        target="_blank"
+                                        rel="noopener noreferrer">http://www.minvivienda.gov.co/Decretos%20Vivienda/1337%20-%202002.pdf</a>.
+                                </li>
+                                <li>[21] Ministerio de Ambiente y Desarrollo Sostenible. ¿Qué son los negocios verdes?
+                                    En: <a
+                                        href="https://www.minambiente.gov.co/index.php/component/content/article/1381-plantilla-negocios-verdes-y-sostenibles-38"
+                                        target="_blank"
+                                        rel="noopener noreferrer">https://www.minambiente.gov.co/index.php/component/content/article/1381-plantilla-negocios-verdes-y-sostenibles-38</a>.
+                                </li>
+                                <li>[22] Ministerio de Ambiente y Desarrollo Sostenible. REDD+. En: <a
+                                        href="https://www.minambiente.gov.co/index.php/component/content/article?id=439:plantilla-bosques-biodiversidad-y-servicios-ecosistematicos-32"
+                                        target="_blank"
+                                        rel="noopener noreferrer">https://www.minambiente.gov.co/index.php/component/content/article?id=439:plantilla-bosques-biodiversidad-y-servicios-ecosistematicos-32</a>.
+                                </li>
+                                <li>[23] Ministerio de Ambiente y Desarrollo Sostenible. REDD+ Conozca qué es el Mercado
+                                    Voluntario de Carbono - Redd+. En: <a
+                                        href="https://www.minambiente.gov.co/index.php/bosques-biodiversidad-y-servicios-ecosistematicos/reduccion-de-emisiones-de-gases/conozca-que-es-el-mercado-del-carbono"
+                                        target="_blank"
+                                        rel="noopener noreferrer">https://www.minambiente.gov.co/index.php/bosques-biodiversidad-y-servicios-ecosistematicos/reduccion-de-emisiones-de-gases/conozca-que-es-el-mercado-del-carbono</a>.
+                                </li>
+                                <li>[24] Fondo Global para el Medio Ambiente (Global Environmental Facility: GEF), PNUD.
+                                    (2014). Orientaciones para el diseño de instrumentos para la conservación de la
+                                    biodiversidad y los servicios ecosistémicos. Bogotá: El Bando Creativo, TNC, WWF.
+                                </li>
+                                <li>[25] El negocio fiduciario en Colombia: conceptos básicos. En: <a
+                                        href="https://www.asofiduciarias.org.co/wp-content/uploads/2017/12/Aspectos-Basicos-del-Negocio-Fiduciario-AF-DIC-2015.pdf"
+                                        target="_blank"
+                                        rel="noopener noreferrer">https://www.asofiduciarias.org.co/wp-content/uploads/2017/12/Aspectos-Basicos-del-Negocio-Fiduciario-AF-DIC-2015.pdf</a>.
+                                </li>
                             </ul>
                         </div>
                     </div>

@@ -6,6 +6,7 @@
     <title>Presentación</title>
 
     <link rel="stylesheet" href="assets/thirdpart/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/thirdpart/css/animate.min.css">
     <link rel="stylesheet" href="assets/css/master.min.css">
 </head>
 <body class="bck1">
@@ -33,129 +34,161 @@
         <!-- gráficos -->
         <div class="container-fluid p-0 d-flex align-items-center mt-4">
             <div class="container-fluid m-0 p-0">
-                <div class="row py-0 px-5">
+                <div class="row pt-2 pb-2 px-5">
                     <div class="col-sm-3">
-                        <h3>Instrucciones</h3>
-                        <h6>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut fuga eligendi, cum suscipit harum</h6>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus, aspernatur eligendi? Reprehenderit quibusdam fuga cumque officiis minus laboriosam aliquid laborum animi! Repellendus explicabo quo optio molestias totam, animi nobis delectus!Debitis dicta excepturi quidem.</p>
+                        <h3>Introducción</h3>
+                        <p>Como hemos visto hasta ahora, existen instrumentos económicos, de financiación y de gestión del suelo que contribuyen a la puesta en marcha y sostenibilidad de acciones para la conservación de la biodiversidad en un municipio, en articulación con su visión y en correspondencia con sus características particulares.</p>
                     </div>
-                    <div class="col-sm-4 offset-sm-2 mt-n5 p-0 pl-5 pb-4">
+                    <div class="col-sm-4 offset-sm-2 mt-n5 p-0 pl-5 pb-3">
                         <img src="assets/img/rueda_sectores/rueda.png" class="img-fluid" alt="">
-                    </div>
-                    <div class="col-sm-3 mt-5 px-5">
-                        <a href="interactivo.html" class="btn btn-outline-primary btn-personalized mt-5">Comenzar <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-caret-right-fill" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M12.14 8.753l-5.482 4.796c-.646.566-1.658.106-1.658-.753V3.204a1 1 0 0 1 1.659-.753l5.48 4.796a1 1 0 0 1 0 1.506z"/>
-                        </svg></a>
+
+                        <img id="plus-1" class="plus animate__animated animate__heartBeat animate__infinite" src="assets/img/icons/icon-plus.png" alt="" width="25px">
+                        <img id="plus-2" class="plus animate__animated animate__heartBeat animate__infinite" src="assets/img/icons/icon-plus.png" alt="" width="25px">
+                        <img id="plus-3" class="plus animate__animated animate__heartBeat animate__infinite" src="assets/img/icons/icon-plus.png" alt="" width="25px">
+                        <img id="plus-4" class="plus animate__animated animate__heartBeat animate__infinite" src="assets/img/icons/icon-plus.png" alt="" width="25px">
+                        <img id="plus-5" class="plus animate__animated animate__heartBeat animate__infinite" src="assets/img/icons/icon-plus.png" alt="" width="25px">
+                        <img id="plus-6" class="plus animate__animated animate__heartBeat animate__infinite" src="assets/img/icons/icon-plus.png" alt="" width="25px">
+
+                        <div id="toast-1" class="toast" role="alert" aria-live="assertive" aria-atomic="true">
+                            <div class="toast-header">
+                              <button type="button" class="ml-2 mb-1 close" id="close-1" data-dismiss="toast" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                              </button>
+                            </div>
+                            <div class="toast-body d-flex justify-content-between align-items-start">
+                                <img src="assets/img/icons/icon-instituciones.png" alt="" width="10%" class="mr-2">
+                                <p>
+                                    <b>Instituciones o dependencias de orden nacional o local</b> relacionadas con su formulación y aplicación
+                                </p>
+                            </div>
+                        </div>
+                        <div id="line-1" class="line">
+                            <img src="assets/img/lines/line-toast-1.png" alt="">
+                        </div>
+                        <div id="toast-2" class="toast" role="alert" aria-live="assertive" aria-atomic="true">
+                            <div class="toast-header">
+                              <button type="button" class="ml-2 mb-1 close" id="close-2" data-dismiss="toast" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                              </button>
+                            </div>
+                            <div class="toast-body d-flex justify-content-between align-items-start">
+                                <img src="assets/img/icons/icon-instrumento.png" alt="" width="10%" class="mr-2">
+                                <p>
+                                    <b>¿Con qué instrumentos se puede combinar?</b> Conjunto de instrumentos con los cuales es recomendable combinarlo. 
+                                </p>
+                            </div>
+                        </div>
+                        <div id="line-2" class="line">
+                            <img src="assets/img/lines/line-toast-2.png" alt="">
+                        </div>
+                        <div id="toast-3" class="toast" role="alert" aria-live="assertive" aria-atomic="true">
+                            <div class="toast-header">
+                              <button type="button" class="ml-2 mb-1 close" id="close-3" data-dismiss="toast" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                              </button>
+                            </div>
+                            <div class="toast-body d-flex justify-content-between align-items-start">
+                                <img src="assets/img/icons/icon-requerimientos.png" alt="" width="10%" class="mr-2">
+                                <p>
+                                    <b>Requerimientos mínimos.</b> Señala los aspectos clave a considerar para aplicar el instrumento: parámetros y criterios, duración, documentación, entre otros.
+                                </p>
+                            </div>
+                        </div>
+                        <div id="line-3" class="line">
+                            <img src="assets/img/lines/line-toast-3.png" alt="">
+                        </div>
+                        <div id="toast-4" class="toast" role="alert" aria-live="assertive" aria-atomic="true">
+                            <div class="toast-header">
+                              <button type="button" class="ml-2 mb-1 close" id="close-4" data-dismiss="toast" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                              </button>
+                            </div>
+                            <div class="toast-body d-flex justify-content-between align-items-start">
+                                <img src="assets/img/icons/icon-contexto.png" alt="" width="10%" class="mr-2">
+                                <p>
+                                    <b>¿En qué contexto usarlo?</b> Información sobre los casos, situaciones en las que es pertinente el instrumento.
+                                </p>
+                            </div>
+                        </div>
+                        <div id="line-4" class="line">
+                            <img src="assets/img/lines/line-toast-4.png" alt="">
+                        </div>
+                        <div id="toast-5" class="toast" role="alert" aria-live="assertive" aria-atomic="true">
+                            <div class="toast-header">
+                              <button type="button" class="ml-2 mb-1 close" id="close-5" data-dismiss="toast" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                              </button>
+                            </div>
+                            <div class="toast-body d-flex justify-content-between align-items-start">
+                                <img src="assets/img/icons/icon-tipo.png" alt="" width="10%" class="mr-2">
+                                <p>
+                                    <b>Tipo de instrumento.</b> Señala la categoría más específica a la que pertenecen los instrumentos de acuerdo a sus características. 
+                                </p>
+                            </div>
+                        </div>
+                        <div id="line-5" class="line">
+                            <img src="assets/img/lines/line-toast-5.png" alt="">
+                        </div>
+                        <div id="toast-6" class="toast" role="alert" aria-live="assertive" aria-atomic="true">
+                            <div class="toast-header">
+                              <button type="button" class="ml-2 mb-1 close" id="close-6" data-dismiss="toast" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                              </button>
+                            </div>
+                            <div class="toast-body d-flex justify-content-between align-items-start">
+                                <img src="assets/img/icons/icon-grupo.png" alt="" width="10%" class="mr-2">
+                                <p>
+                                    <b>Grupo:</b> <br>Se refiere a las categorías más amplias en que se clasifican los instrumentos: económicos, de financiación o gestión del suelo.
+                                </p>
+                            </div>
+                        </div>
+                        <div id="line-6" class="line">
+                            <img src="assets/img/lines/line-toast-6.png" alt="">
+                        </div>
                     </div>
                 </div>
-                <div class="row py-0 px-5">
-                    <div class="col-sm-3 p-0 pr-4 border-top">
-                        <h5>Lorem ipsum dolor sit amet</h5>
+                <div class="row mt-0 pt-0 pb-3 px-5">
+                    <div >
+                        <div class="col-sm-3 col-md-3 p-0 pr-5">
+                            <a href="" class="btn btn-primary mt-2">Importante</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="row mt-0 py-0 px-5">
+                    <div >
+                        <div class="col-sm-4 p-0 pr-5">
+                            <p>La herramienta interactiva presenta los instrumentos por color, de acuerdo con las acciones de gestión y los recursos económicos necesarios para su formulación y aplicación, así:</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="row mt-0 py-0 px-5">
+                    <div class="col-sm-5 p-0 pt-2 border-top">
                         <div class="levels no-fixed">
-                            <div class="row mb-3">
-                                <div class="col-sm-12 colors_inv">
+                            <div class="row m-0 p-0">
+                                <div class="col-sm-5 p-0 colors_inv">
                                     <div class="indicator">
                                         <span></span>
                                         <span></span>
                                         <span></span>
                                         <span></span>
                                     </div>
-                                    <h5 class="m-0">Inversión</h5>
-                                    <p>Los colores son del más claro  a más oscuro en función del grado de inversión que se debe hacer</p>
+                                    <p class="mt-2"><b>Azul:</b> de claro a oscuro, dependiendo de si el municipio tiene que invertir menor a mayor cantidad de recursos económicos, respectivamente.</p>
                                 </div>
-                            </div>
-                            <div class="row">
-                                <div class="col-sm-12 colors_ges">
+                                <div class="col-sm-5 p-0 offset-sm-2 colors_ges">
                                     <div class="indicator">
                                         <span></span>
                                         <span></span>
                                         <span></span>
                                         <span></span>
                                     </div>
-                                    <h5 class="m-0">Gestión</h5>
-                                    <p>Los colores son del más claro  a más oscuro en función del grado de gestión que se debe hacer</p>
+                                    <p class="mt-2"><b>Morado:</b> de más a menos oscuro, dependiendo de si el municipio tiene que llevar a cabo una mayor o menor cantidad de acciones en su gestión, respectivamente.</p>
                                 </div>
                             </div>
                         </div>                    
                     </div>
-                    <div class="col-sm-6 mx-2 p-0 px-2 adjust-size border-top">
-                        <div class="row">
-                            <div class="col-sm-4 d-flex align-items-stretch">
-                                <div class="form-check  pt-2">
-                                    <input type="checkbox" name="grupo" id="grupo" class="form-check-input">
-                                    <label for="grupo" class="form-check-label">1. Grupo</label>
-                                </div>
-                            </div>
-                            <div class="col-sm-4 d-flex align-items-stretch">
-                                <div class="form-check  pt-2">
-                                    <input type="checkbox" name="tipo" id="tipo" class="form-check-input">
-                                    <label for="tipo" class="form-check-label">2. Tipo de instrumento</label>
-                                </div>
-                            </div>
-                            <div class="col-sm-4 d-flex align-items-stretch">
-                                <div class="form-check  pt-2">
-                                    <input type="checkbox" name="instrumento" id="instrumento" class="form-check-input">
-                                    <label for="instrumento" class="form-check-label">3. Instrumento</label>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="col-sm-4 d-flex align-items-stretch">
-                                <div class="form-check  pt-2">
-                                    <input type="checkbox" name="requerimiento" id="requerimiento"
-                                        class="form-check-input">
-                                    <label for="requerimiento" class="form-check-label">4. Requerimientos mínimos de
-                                        aplicación</label>
-                                </div>
-                            </div>
-                            <div class="col-sm-4 d-flex align-items-stretch">
-                                <div class="form-check  pt-2">
-                                    <input type="checkbox" name="cuando" id="cuando" class="form-check-input">
-                                    <label for="cuando" class="form-check-label">5. Cuando aplicarlo</label>
-                                </div>
-                            </div>
-                            <div class="col-sm-4 d-flex align-items-stretch">
-                                <div class="form-check  pt-2">
-                                    <input type="checkbox" name="combinar" id="combinar" class="form-check-input">
-                                    <label for="combinar" class="form-check-label">6. Con que instrumentos
-                                        combinar</label>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="col-sm-4 ml-2 p-0 mt-3">
-                                <select class="custom-select">
-                                    <option value="1" selected>1. Grupo</option>
-                                    <option value="2">2. Tipo de instrumento</option>
-                                    <option value="3">3. Instrumento</option>
-                                    <option value="4">4. Requerimientos mínimos de aplicación</option>
-                                    <option value="5">5. Cuando aplicarlo</option>
-                                    <option value="6">6. Con que instrumentos combinar</option>
-                                  </select>
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="col-sm-12 p-0 pl-2 mt-2">
-                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo minima quaerat eum in explicabo est quasi nisi quas. Exercitationem similique optio harum atque. Reprehenderit totam nihil voluptatibus dolor, nam nesciunt.</p>
-                            </div>
-                        </div>
-                        
-                    </div>
-                    <div class="col-sm-3 p-0 pl-2 border-top">
-                        <div class="row">
-                            <div class="col-sm-6 py-3 d-flex justify-content-around align-items-center">
-                                <div class="pointer"></div>
-                                <div class="pointer"></div>
-                                <div class="pointer"></div>
-                            </div>
-                            <div class="col-sm-6 py-3">
-                                <a class="btn_modal_rueda no-pointer relative">
-                                    <span>RUTA</span>
-                                    <img id="img-rueda" src="assets/img/rueda_sectores/rueda_miniatura.png" alt="" class="img-fluid w-100">
-                                </a>
-                            </div>
-                        </div>
-                    </div>
+                    <div class="col-sm-2 offset-sm-4 mt-0 px-5">
+                        <a href="interactivo.html" class="btn btn-outline-primary btn-personalized mt-2">Comenzar</a>
+                    </div>                
                 </div>
             </div>
         </div>

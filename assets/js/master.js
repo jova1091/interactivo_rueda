@@ -401,10 +401,57 @@ $(window).on('load', function () {
 $(document).ready(function () {
     know_resolution();
     indicatorState(0, 0);
+
     $('#groups').load(jsonSVG.groups)
     $('.outer-loader').delay(1000).fadeOut('slow');
 
-    
+    $('.toast').toast({
+        autohide: false
+    })
+
+    $('#plus-1').click(function(){
+        $('#toast-1').toast('show');
+        $('#line-1').css('opacity', 1);
+    });
+    $('#plus-2').click(function(){
+        $('#toast-2').toast('show');
+        $('#line-2').css('opacity', 1);
+    });
+    $('#plus-3').click(function(){
+        $('#toast-3').toast('show');
+        $('#line-3').css('opacity', 1);
+    });
+    $('#plus-4').click(function(){
+        $('#toast-4').toast('show');
+        $('#line-4').css('opacity', 1);
+    });
+    $('#plus-5').click(function(){
+        $('#toast-5').toast('show');
+        $('#line-5').css('opacity', 1);
+    });
+    $('#plus-6').click(function(){
+        $('#toast-6').toast('show');
+        $('#line-6').css('opacity', 1);
+    });
+
+    $('#close-1').click(function(){
+        $('#line-1').css('opacity', 0);
+    });
+    $('#close-2').click(function(){
+        $('#line-2').css('opacity', 0);
+    });
+    $('#close-3').click(function(){
+        $('#line-3').css('opacity', 0);
+    });
+    $('#close-4').click(function(){
+        $('#line-4').css('opacity', 0);
+    });
+    $('#close-5').click(function(){
+        $('#line-5').css('opacity', 0);
+    });
+    $('#close-6').click(function(){
+        $('#line-6').css('opacity', 0);
+    });
 
     // EasyZoom para zoom de imagen en modal https://i-like-robots.github.io/EasyZoom/
     $('.easyzoom').easyZoom({
