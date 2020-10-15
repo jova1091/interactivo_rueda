@@ -33,14 +33,26 @@ body {
     overflow-x: hidden;
     overflow-y: auto;
     font-family: 'Montserrat', sans-serif;
+}
 
-    &.bck1 {
-        background-color: $fondo1;
-    }
+.bck1 {
+    background-color: $fondo1;
+}
 
-    &.bck2 {
-        background-color: $fondo2;
-    }
+.bck1Transparent {
+    background-color: rgba($fondo1, 0.6);
+}
+
+.bck2 {
+    background-color: $fondo2;
+}
+
+.bckAzul{
+    background-color: $azul1;
+}
+
+.bckMorado{
+    background-color: $morado1;
 }
 
 main {
@@ -108,8 +120,20 @@ svg {
 }
 
 .btn-personalized {
+    display: flex;
+    align-items: center;
+    padding: 0;
     border-color: $amarillo;
     color: $blanco;
+
+    span {
+        height: 100%;
+        float: left;
+        background-color: $amarillo;    
+        padding: 12px 6px;
+        display: inline-block;
+        margin-right: 10px;
+    }
 
     &:hover,
     &:active {
@@ -132,6 +156,17 @@ svg {
     .nav-link {
         color: $blanco;
 
+        svg {
+            width: 25px;
+            height: 25px;
+            margin: 0.3em;
+        }
+
+        &:hover {
+            svg {
+                fill: $blanco;
+            }
+        }    
 
         &:hover {
             color: $lightFucsia;
@@ -371,6 +406,28 @@ svg {
     }
 }
 
+.modal-home {
+
+    
+    .close {
+        color: $blanco;
+        font-size: 5rem;
+        font-weight: 100;
+        text-shadow: 0 0 transparent;
+        opacity: .7;
+        position: absolute;
+        right: 1rem;
+        top: 0rem;
+        z-index: 1000;
+
+        &:focus,
+        &:hover {
+            outline: none;
+            font-weight: 200;
+        }
+    }
+}
+
 .contents {
     min-height: calc(100vh - 325px);
 }
@@ -403,6 +460,10 @@ svg {
     font-size: 0.8em;
     left: 3rem;
     bottom: 0px;
+
+    .p_2 {
+        font-size: 1.2em;
+    }
 
     span {
         min-width: 25%;
@@ -547,159 +608,29 @@ svg {
     }
 }
 
-.plus {
-    position: absolute;
+.hr-home {
+    width: 100%;
+    border: 2px solid $blanco;
+}
+
+.puntero {
     cursor: pointer;
 }
 
-.toast {
-    position: absolute;
-    max-width: 300px;
-
-    .toast-header {
-        background-color: $azul1;
-        border-bottom: 0px;
-        display: flex;
-        justify-content: flex-end;
-
-        .close {
-            width: 20px;
-            height: 20px;
-            margin-right: -7px;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            background-color: $morado3;
-            border-radius: 50%;
-            padding: 0px 5px;
-            opacity: 1;
-            text-align: center;
-
-            span {
-                color: $blanco;
-                box-shadow: 0;
-                font-size: 1em;
-                font-weight: 300;
-            }
-
-            &:focus {
-                outline: 0;
-            }
-        }
-    }
-
-    .toast-body {
-        background-color: $azul1;
-
-        p {
-            margin: 0;    
-            font-size: .9em;
-        }
-    }
+.tipbox1, .tipbox2, .tipbox3, .tipbox4, .tipbox5, .tipbox6 {
+    transition: opacity 1s;
 }
 
-.line {
-    position: absolute;
-    z-index: 1;
-    opacity: 0;
-
-    img {
-        width: 100%;
-        height: auto;    
-    }
+#closetipbox1, #closetipbox2, #closetipbox3, #closetipbox4, #closetipbox5, #closetipbox6 {
+    cursor: pointer;
 }
 
-#plus-1{
-    left: 215px;
-    top: 40px;
-}
-#plus-2{
-    left: 100px;
-    top: 260px;
-}
-#plus-3{
-    left: 250px;
-    bottom: 130px;
-}
-#plus-4{
-    right: 240px;
-    bottom: 180px;
-}
-#plus-5{
-    right: 200px;
-    top: 270px;
-}
-#plus-6{
-    right: calc(50% - 25px);
-    top: calc(50% - 25px);
-}
-
-#toast-1{
-    top: -35px;
-    left: -175px;
-}
-#line-1 {
-    top: -12px;
-    left: 124px;
-    width: 105px;
-    height: 20px;
-}
-
-#toast-2{
-    top: 210px;
-    left: -260px;
-}
-#line-2 {
-    top: 262px;
-    left: -9px;
-    width: 110px;
-    height: 20px;
-}
-
-#toast-3{
-    bottom: -40px;
-    left: -190px;
-}
-#line-3 {
-    bottom: 80px;
-    left: 95px;
-    width: 65px;
-    height: 45px;
-    transform: rotate(270deg) rotateY(180deg);
-}
-
-#toast-4{
-    bottom: -40px;
-    right: -220px;
-}
-#line-4 {
-    bottom: 165px;
-    right: 79px;
-    width: 175px;
-    height: 20px;
-}
-
-#toast-5{
-    top: 170px;
-    right: -315px;
-}
-#line-5 {
-    top: 230px;
-    right: -17px;
-    width: 218px;
-    height: 20px;
-}
-
-#toast-6{
-    top: -35px;
-    right: -250px;
-}
-#line-6 {
-    top: 25px;
-    right: 47px;
-    width: 250px;
-    height: 20px;
-}
+.tipbox1 {opacity: 0;}
+.tipbox2 {opacity: 0;}
+.tipbox3 {opacity: 0;}
+.tipbox4 {opacity: 0;}
+.tipbox5 {opacity: 0;}
+.tipbox6 {opacity: 0;}
 
 @media (max-width: 1366px) {
     .btn_modal_rueda {

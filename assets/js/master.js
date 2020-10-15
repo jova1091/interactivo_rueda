@@ -402,55 +402,60 @@ $(document).ready(function () {
     know_resolution();
     indicatorState(0, 0);
 
+    let rutaImgHome = 'assets/img/images/';
+
     $('#groups').load(jsonSVG.groups)
     $('.outer-loader').delay(1000).fadeOut('slow');
-
-    $('.toast').toast({
-        autohide: false
-    })
-
-    $('#plus-1').click(function(){
-        $('#toast-1').toast('show');
-        $('#line-1').css('opacity', 1);
+ 
+    $('#plustipbox1').click(function(){
+        $('.tipbox1').css('opacity', 1);
+        $('#rueda-home').attr('href',rutaImgHome+'img1.png');
     });
-    $('#plus-2').click(function(){
-        $('#toast-2').toast('show');
-        $('#line-2').css('opacity', 1);
+    $('#plustipbox2').click(function(){
+        $('.tipbox2').css('opacity', 1);
+        $('#rueda-home').attr('href',rutaImgHome+'img2.png');
     });
-    $('#plus-3').click(function(){
-        $('#toast-3').toast('show');
-        $('#line-3').css('opacity', 1);
+    $('#plustipbox3').click(function(){
+        $('.tipbox3').css('opacity', 1);
+        $('#rueda-home').attr('href',rutaImgHome+'img3.png');
     });
-    $('#plus-4').click(function(){
-        $('#toast-4').toast('show');
-        $('#line-4').css('opacity', 1);
+    $('#plustipbox4').click(function(){
+        $('.tipbox4').css('opacity', 1);
+        $('#rueda-home').attr('href',rutaImgHome+'img4.png');
     });
-    $('#plus-5').click(function(){
-        $('#toast-5').toast('show');
-        $('#line-5').css('opacity', 1);
+    $('#plustipbox5').click(function(){
+        $('.tipbox5').css('opacity', 1);
+        $('#rueda-home').attr('href',rutaImgHome+'img5.png');
     });
-    $('#plus-6').click(function(){
-        $('#toast-6').toast('show');
-        $('#line-6').css('opacity', 1);
+    $('#plustipbox6').click(function(){
+        $('.tipbox6').css('opacity', 1);
+        $('#rueda-home').attr('href',rutaImgHome+'img6.png');
     });
 
-    $('#close-1').click(function(){
-        $('#line-1').css('opacity', 0);
+ 
+    $('#closetipbox1').click(function(){
+        $('.tipbox1').css('opacity', 0);
+        $('#rueda-home').attr('href',rutaImgHome+'img0.png');
     });
-    $('#close-2').click(function(){
-        $('#line-2').css('opacity', 0);
+    $('#closetipbox2').click(function(){
+        $('.tipbox2').css('opacity', 0);
+        $('#rueda-home').attr('href',rutaImgHome+'img0.png');
     });
-    $('#close-3').click(function(){
-        $('#line-3').css('opacity', 0);
+    $('#closetipbox3').click(function(){
+        $('.tipbox3').css('opacity', 0);
+        $('#rueda-home').attr('href',rutaImgHome+'img0.png');
     });
-    $('#close-4').click(function(){
-        $('#line-4').css('opacity', 0);
+    $('#closetipbox4').click(function(){
+        $('.tipbox4').css('opacity', 0);
+        $('#rueda-home').attr('href',rutaImgHome+'img0.png');
     });
-    $('#close-5').click(function(){
-        $('#line-5').css('opacity', 0);
+    $('#closetipbox5').click(function(){
+        $('.tipbox5').css('opacity', 0);
+        $('#rueda-home').attr('href',rutaImgHome+'img0.png');
     });
-    $('#close-6').click(function(){
-        $('#line-6').css('opacity', 0);
+    $('#closetipbox6').click(function(){
+        $('.tipbox6').css('opacity', 0);
+        $('#rueda-home').attr('href',rutaImgHome+'img0.png');
     });
 
     // EasyZoom para zoom de imagen en modal https://i-like-robots.github.io/EasyZoom/
