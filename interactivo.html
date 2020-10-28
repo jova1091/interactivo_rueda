@@ -1,0 +1,414 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interactivo</title>
+
+    <link rel="stylesheet" href="assets/thirdpart/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/thirdpart/css/animate.min.css">
+    <link rel="stylesheet" href="assets/css/master.min.css">
+</head>
+
+<body class="bck1">
+
+    <div class="outer-loader">
+        <div class="d-flex flex-column justify-content-center align-items-center">
+            <h4 class="mb-3">Loading...</h4>
+            <div class="spinner-border" role="status">
+            </div>
+        </div>
+    </div>
+
+    <main>
+        <!-- menu -->
+        <div class="container-fluid p-0">
+            <div class="header p-0">
+                <nav class="navbar navbar-expand-lg p-0">
+                    <a class="navbar-brand" href="index.html">
+                        <img src="assets/img/banner.png" alt="" loading="lazy">
+                    </a>
+                    <div class="collapse navbar-collapse d-flex justify-content-end" id="navbarSupportedContent">
+                        <ul class="navbar-nav mr-5">
+                            <li class="nav-item">
+                                <a class="nav-link d-flex align-items-baseline" href="index.html"><img
+                                        src="assets/img/icons/icon-home.png" alt="home"> Inicio</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link d-flex align-items-baseline" href="assets/pdf/rueda.pdf" target="_blank">Descarga <img
+                                        src="assets/img/icons/icon-pdf.png" alt="Descargar"></a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link d-flex align-items-baseline ml-4" href="#" data-toggle="modal"
+                                    data-target="#modal_info">Sitios Web Consultados <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-globe" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                                        <path fill-rule="evenodd" d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8zm7.5-6.923c-.67.204-1.335.82-1.887 1.855A7.97 7.97 0 0 0 5.145 4H7.5V1.077zM4.09 4H2.255a7.025 7.025 0 0 1 3.072-2.472 6.7 6.7 0 0 0-.597.933c-.247.464-.462.98-.64 1.539zm-.582 3.5h-2.49c.062-.89.291-1.733.656-2.5H3.82a13.652 13.652 0 0 0-.312 2.5zM4.847 5H7.5v2.5H4.51A12.5 12.5 0 0 1 4.846 5zM8.5 5v2.5h2.99a12.495 12.495 0 0 0-.337-2.5H8.5zM4.51 8.5H7.5V11H4.847a12.5 12.5 0 0 1-.338-2.5zm3.99 0V11h2.653c.187-.765.306-1.608.338-2.5H8.5zM5.145 12H7.5v2.923c-.67-.204-1.335-.82-1.887-1.855A7.97 7.97 0 0 1 5.145 12zm.182 2.472a6.696 6.696 0 0 1-.597-.933A9.268 9.268 0 0 1 4.09 12H2.255a7.024 7.024 0 0 0 3.072 2.472zM3.82 11H1.674a6.958 6.958 0 0 1-.656-2.5h2.49c.03.877.138 1.718.312 2.5zm6.853 3.472A7.024 7.024 0 0 0 13.745 12H11.91a9.27 9.27 0 0 1-.64 1.539 6.688 6.688 0 0 1-.597.933zM8.5 12h2.355a7.967 7.967 0 0 1-.468 1.068c-.552 1.035-1.218 1.65-1.887 1.855V12zm3.68-1h2.146c.365-.767.594-1.61.656-2.5h-2.49a13.65 13.65 0 0 1-.312 2.5zm2.802-3.5h-2.49A13.65 13.65 0 0 0 12.18 5h2.146c.365.767.594 1.61.656 2.5zM11.27 2.461c.247.464.462.98.64 1.539h1.835a7.024 7.024 0 0 0-3.072-2.472c.218.284.418.598.597.933zM10.855 4H8.5V1.077c.67.204 1.335.82 1.887 1.855.173.324.33.682.468 1.068z"/>
+                                      </svg></a>
+                            </li>
+                        </ul>
+                    </div>
+                </nav>
+
+                <div class="container-fluid row m-0 py-0 px-5 pt-2">
+                    <div class="col-sm-12 p-0 border-top">
+                        <div class="row">
+                            <div class="col-sm-2 d-flex align-items-stretch">
+                                <div class="form-check segment pt-2">
+                                    <input type="checkbox" name="grupo" id="grupo" class="form-check-input"
+                                        onclick="returnToGroups()">
+                                    <label for="grupo" class="form-check-label">1. Grupo</label>
+                                </div>
+                            </div>
+                            <div class="col-sm-2 d-flex align-items-stretch">
+                                <div class="form-check segment pt-2">
+                                    <input type="checkbox" name="tipo" id="tipo" class="form-check-input"
+                                        onclick="returnToTypesInstrument()">
+                                    <label for="tipo" class="form-check-label">2. Tipo de instrumento</label>
+                                </div>
+                            </div>
+                            <div class="col-sm-2 d-flex align-items-stretch">
+                                <div class="form-check segment pt-2">
+                                    <input type="checkbox" name="instrumento" id="instrumento" class="form-check-input"
+                                        onclick="returnToTypesInstrument()">
+                                    <label for="instrumento" class="form-check-label">3. Instrumento</label>
+                                </div>
+                            </div>
+                            <div class="col-sm-2 d-flex align-items-stretch">
+                                <div class="form-check segment pt-2">
+                                    <input type="checkbox" name="requerimiento" id="requerimiento"
+                                        class="form-check-input" onclick="checkNavigation()">
+                                    <label for="requerimiento" class="form-check-label">4. Requerimientos mínimos de
+                                        aplicación</label>
+                                </div>
+                            </div>
+                            <div class="col-sm-2 d-flex align-items-stretch">
+                                <div class="form-check segment pt-2">
+                                    <input type="checkbox" name="cuando" id="cuando" class="form-check-input"
+                                        onclick="checkNavigation()">
+                                    <label for="cuando" class="form-check-label">5. Cuando aplicarlo</label>
+                                </div>
+                            </div>
+                            <div class="col-sm-2 d-flex align-items-stretch">
+                                <div class="form-check segment pt-2">
+                                    <input type="checkbox" name="combinar" id="combinar" class="form-check-input"
+                                        onclick="checkNavigation()">
+                                    <label for="combinar" class="form-check-label">6. Con que instrumentos
+                                        combinar</label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- gráficos -->
+        <div class="container-fluid p-0 d-flex align-items-center mt-4">
+            <div class="container-fluid row m-0 p-0" id="adjustBkg">
+                <div class="col-sm-12 py-0 px-5">
+                    <a class="btn_modal_rueda" data-toggle="modal" data-target="#modal_rueda">
+                        <span>RUTA</span>
+                        <img id="img-rueda" src="assets/img/rueda_sectores/rueda_miniatura.png" alt=""
+                            class="img-fluid w-100">
+                    </a>
+
+                    <div id="firstLvl" class="row d-flex align-items-center">
+                        <div class="col-sm-4 offset-sm-4 p-5">
+                            <div class="p-5">
+                                <div id="groups"></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div id="secondLvl" class="row d-flex align-items-center">
+                        <div class="col-sm-4 offset-sm-4 p-5">
+                            <div class="px-5">
+                                <div id="types"></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div id="thirdLvl" class="row d-flex align-items-center">
+                        <div class="col-sm-6 px-5">
+                            <div class="px-5">
+                                <div id="typeInstrument"></div>
+                            </div>
+                        </div>
+                        <div class="col-sm-6 d-flex flex-wrap flex-column align-items-center align-content-center">
+                            <div class="row w-100">
+                                <div class="col-sm-12 mb-4">
+                                    <p id="text1" class="m-0 p-3 bck-azul1 animate__animated ">
+                                        <b id="instrument"></b>
+                                        <span>
+                                            <b>Definición: </b><span id="definition"
+                                                class="pr-2 scroll-inverted"></span>
+                                        </span>
+                                    </p>
+                                </div>
+                                <div class="col-sm-4 d-flex align-items-stretch">
+                                    <p id="text3" class="m-0 p-4 bck-morado1 animate__animated animate__delay-1s ">
+                                        <b>¿En qué contexto usarlo?</b> <br>
+                                        <span id="context" class="pr-2 scroll-inverted"></span>
+                                    </p>
+                                </div>
+                                <div class="col-sm-4 d-flex align-items-stretch">
+                                    <p id="text2" class="m-0 p-4 bck-morado1 animate__animated animate__delay-1s ">
+                                        <b>Requerimientos mínimos:</b> <br>
+                                        <span id="requirements" class="pr-2 scroll-inverted"></span>
+                                    </p>
+                                </div>
+                                <div class="col-sm-4 d-flex align-items-stretch">
+                                    <p id="text4" class="m-0 p-4 bck-morado2 animate__animated animate__delay-1s ">
+                                        <b>¿Con qué instrumentos se puede combinar?</b> <br>
+                                        <span id="which" class="pr-2 scroll-inverted"></span>
+                                    </p>
+                                </div>
+                                <div class="col-sm-12 mt-4">
+                                    <p id="text5" class="m-0 p-3 bck-azul2 animate__animated animate__delay-2s ">
+                                        <b>Instituciones o dependencias del orden nacional o local relacionadas con su
+                                            formulación y aplicación:</b>
+                                        <span id="institutions" class="pr-2"></span>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <div class="levels">
+        <div class="row mb-3">
+            <div class="col-sm-12 colors_inv">
+                <div class="indicator">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+                <h5 class="m-0">Inversión</h5>
+                <p>Los colores son del más claro a más oscuro en función del grado de inversión que se debe hacer</p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-12 colors_ges">
+                <div class="indicator">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+                <h5 class="m-0">Gestión</h5>
+                <p>Los colores son del más claro a más oscuro en función del grado de gestión que se debe hacer</p>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-sm-6"></div>
+                <div class="col-sm-6">
+                   <!--  <p class="my-4">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Laudantium exercitationem
+                        ad reiciendis excepturi, labore</p> -->
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Modal -->
+    <div class="modal fade " id="modal_rueda" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-xl">
+            <div class="modal-content modal_rueda">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+                <div class="modal-body">
+                    <div class="row">
+                        <div class="col-sm-8 offset-sm-2 easyzoom">
+                            <a id="a-rueda-modal" href="assets/img/rueda_sectores/rueda.png">
+                                <img id="img-rueda-modal" src="assets/img/rueda_sectores/rueda.png" alt=""
+                                    class="img-fluid w-100">
+                            </a>
+                        </div>
+                        <div class="col-sm-10 offset-sm-1 pt-3">
+                            <!-- <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat, asperiores at
+                                exercitationem modi voluptates necessitatibus rerum neque repellat excepturi doloremque
+                                iusto optio aspernatur laborum! Aliquid dicta saepe et ex aliquam!</p> -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal -->
+    <div class="modal fade " id="modal_info" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-xl">
+            <div class="modal-content modal_info">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+                <div class="modal-body">
+                    <div class="row">
+                        <div class="col-sm-10 offset-sm-1 pt-3">
+                            <h2 class="mb-4">Documentos y sitios web consultados:</h2>
+                            <ul>
+                                <li>[1] Cámara de Comercio: Desarrollo urbano y regional. ¿Qué son los planes parciales?
+                                    En: <a
+                                        href="https://www.ccb.org.co/Preguntas-frecuentes/Transformar-Bogota-Articulacion-publico-privada/Desarrollo-Urbano-y-Regional/Que-son-los-Planes-Parciales"
+                                        target="_blank"
+                                        rel="noopener noreferrer">https://www.ccb.org.co/Preguntas-frecuentes/Transformar-Bogota-Articulacion-publico-privada/Desarrollo-Urbano-y-Regional/Que-son-los-Planes-Parciales</a>
+                                </li>
+                                <li>[2] Ministerio de Vivienda, Gestión del POT: instrumentos. En: <a
+                                        href="http://www.minvivienda.gov.co/POTPresentacionesGuias/Instrumentos%20de%20gestion%20POT.pdf"
+                                        target="_blank"
+                                        rel="noopener noreferrer">http://www.minvivienda.gov.co/POTPresentacionesGuias/Instrumentos%20de%20gestion%20POT.pdf</a>.
+                                </li>
+                                <li>[3] Empresa de Desarrollo Urbano de Barranquilla S.A. Unidades de actuación
+                                    urbanística. En: <a
+                                        href="https://www.edubar.com.co/unidades-de-actuacion-urbanistica-u-a-u/#:~:text=La%20Unidad%20de%20Actuaci%C3%B3n%20Urban%C3%ADstica,de%20renovaci%C3%B3n%20urbana%20o%20redesarrollo"
+                                        target="_blank"
+                                        rel="noopener noreferrer">https://www.edubar.com.co/unidades-de-actuacion-urbanistica-u-a-u/#:~:text=La%20Unidad%20de%20Actuaci%C3%B3n%20Urban%C3%ADstica,de%20renovaci%C3%B3n%20urbana%20o%20redesarrollo</a>.
+                                </li>
+                                <li>[4] Caja de Vivienda Popular. Enajenación voluntaria de inmuebles. En: <a
+                                        href="https://www.cajaviviendapopular.gov.co/files/Servicio-al-ciudadano/Tramites-servicios/2-Tramites2.pdf"
+                                        target="_blank"
+                                        rel="noopener noreferrer">https://www.cajaviviendapopular.gov.co/files/Servicio-al-ciudadano/Tramites-servicios/2-Tramites2.pdf</a>
+                                </li>
+                                <li>[5] Legis. ¿Cuáles son las diferencias entre la expropiación judicial y la
+                                    administrativa de inmuebles? En: <a
+                                        href="https://www.ambitojuridico.com/noticias/administrativo/administrativo-y-contratacion/cuales-son-las-diferencias-entre-la"
+                                        target="_blank"
+                                        rel="noopener noreferrer">https://www.ambitojuridico.com/noticias/administrativo/administrativo-y-contratacion/cuales-son-las-diferencias-entre-la</a>.
+                                </li>
+                                <li>[6] Secretaría Distrital del Hábitat (Bogotá). Declaratorias de Desarrollo y
+                                    Construcción Prioritaria. En: <a
+                                        href="http://historico1.habitatbogota.gov.co/index.php/proyectos-asociativos-y-declaratorias/declaratorias-de-desarrollo-y-construccion-prioritaria"
+                                        target="_blank"
+                                        rel="noopener noreferrer">http://historico1.habitatbogota.gov.co/index.php/proyectos-asociativos-y-declaratorias/declaratorias-de-desarrollo-y-construccion-prioritaria</a>.
+                                </li>
+                                <li>[7] Sánchez, R. M. (2012). Incentivos económicos para la conservación, un marco
+                                    conceptual. Lima, Perú: Deposito legal de la biblioteca nacional del Perú. En: <a
+                                        href="https://www.researchgate.net/publication/265051683_INCENTIVOS_ECONOMICOS_PARA_LA_CONSERVACION_UN_MARCO_CONCEPTUA"
+                                        target="_blank"
+                                        rel="noopener noreferrer">https://www.researchgate.net/publication/265051683_INCENTIVOS_ECONOMICOS_PARA_LA_CONSERVACION_UN_MARCO_CONCEPTUA</a>.
+                                </li>
+                                <li>[8] Departamento Nacional de Planeación −DNP (2015). Cuenta de Actividades
+                                    Ambientales e Impuestos relacionados con el medio ambiente. <a
+                                        href="https://www.dane.gov.co/files/investigaciones/pib/ambientales/cuentas_ambientales/cuenta-gasto-actividades-e-impuestos-medio-ambiente/Pres_gasto_act_amb_2014pr.pdf"
+                                        target="_blank"
+                                        rel="noopener noreferrer">https://www.dane.gov.co/files/investigaciones/pib/ambientales/cuentas_ambientales/cuenta-gasto-actividades-e-impuestos-medio-ambiente/Pres_gasto_act_amb_2014pr.pdf</a>.
+                                </li>
+                                <li>[9] Parques Nacionales Naturales de Colombia. Compensaciones ambientales e inversión
+                                    forzosa del 1% como herramienta de gestión de las áreas protegidas del SINAP. En: <a
+                                        href="http://www.parquesnacionales.gov.co/portal/es/sistema-nacional-de-areas-protegidas-sinap/compensaciones-ambientales-e-inversion-forzosa-del-1/"
+                                        target="_blank"
+                                        rel="noopener noreferrer">http://www.parquesnacionales.gov.co/portal/es/sistema-nacional-de-areas-protegidas-sinap/compensaciones-ambientales-e-inversion-forzosa-del-1/</a>.
+                                </li>
+                                <li>[10] Ministerio de Ambiente y Desarrollo Sostenible. Manual de Compensaciones del
+                                    Componente Biótico. En: <a
+                                        href="http://portal.anla.gov.co/sites/default/files/comunicaciones/Manuales/manual_de_compensaciones_del_componente_biotico_2018.pdf"
+                                        target="_blank"
+                                        rel="noopener noreferrer">http://portal.anla.gov.co/sites/default/files/comunicaciones/Manuales/manual_de_compensaciones_del_componente_biotico_2018.pdf</a>.
+                                </li>
+                                <li>[11] Contraloría General de la Nación (2018). Revista Economía Colombiana, 351,
+                                    Subsidios y eficiencia del gasto. En: <a
+                                        href="https://www.contraloria.gov.co/documents/20181/1033342/REC351_webint.pdf/11220f59-1c00-4a2f-a936-833413d612b4"
+                                        target="_blank"
+                                        rel="noopener noreferrer">https://www.contraloria.gov.co/documents/20181/1033342/REC351_webint.pdf/11220f59-1c00-4a2f-a936-833413d612b4</a>.
+                                </li>
+                                <li>[12] Ministerio de Agricultura. Certificado de Incentivo Forestal (CIF) 2020. En: <a
+                                        href="https://www.minagricultura.gov.co/tramites-servicios/apoyos-incentivos/Paginas/Certificado-de-Incentivo-Forestal-CIF-2020.aspx#tabs-1b"
+                                        target="_blank"
+                                        rel="noopener noreferrer">https://www.minagricultura.gov.co/tramites-servicios/apoyos-incentivos/Paginas/Certificado-de-Incentivo-Forestal-CIF-2020.aspx#tabs-1b</a>.
+                                </li>
+                                <li>[13] Consejo Empresarial Colombiano para el Desarrollo Sostenible (CECODES). Bonos
+                                    Verdes para el Desarrollo Sostenible en Colombia. En: <a
+                                        href="https://www.cecodes.org.co/site/bonos-verdes-para-el-desarrollo-sostenible-en-colombia/"
+                                        target="_blank"
+                                        rel="noopener noreferrer">https://www.cecodes.org.co/site/bonos-verdes-para-el-desarrollo-sostenible-en-colombia/</a>.
+                                </li>
+                                <li>[14] Montejo, L. (2018) Bonos Verdes en Colombia. asuntos:legales – Consultorio. En:
+                                    <a href="https://www.asuntoslegales.com.co/consultorio/bonos-verdes-en-colombia-2709364"
+                                        target="_blank"
+                                        rel="noopener noreferrer">https://www.asuntoslegales.com.co/consultorio/bonos-verdes-en-colombia-2709364</a>.
+                                </li>
+                                <li>[15] Asobancaria (2018). Bonos verdes, una alternativa al financiamiento climático.
+                                    Revista Semana Económica, Ed. 1158. En: <a
+                                        href="http://www.asobancaria.com/wp-content/uploads/1158.pdf" target="_blank"
+                                        rel="noopener noreferrer">
+                                        http://www.asobancaria.com/wp-content/uploads/1158.pdf</a>.</li>
+                                <li>[16] Banco Interamericano de Desarrollo (BID). Iniciativa Alianza Latinoamericana de
+                                    Fondos de Agua. En: <a
+                                        href="https://www.iadb.org/es/sectores/agua-y-saneamiento/fondos-de-agua/inicio"
+                                        target="_blank"
+                                        rel="noopener noreferrer">https://www.iadb.org/es/sectores/agua-y-saneamiento/fondos-de-agua/inicio</a>.
+                                </li>
+                                <li>[17] Comunidad de práctica 'Ciencia para la Adaptación' (Instituto de Montaña y
+                                    CIIFEN). Marco Legal para la Creación de un Fondo de Agua en Colombia. En: <a
+                                        href="http://www.para-agua.net/extras/fondos/3._Marco_Legal_Colombia.pdf"
+                                        target="_blank"
+                                        rel="noopener noreferrer">http://www.para-agua.net/extras/fondos/3._Marco_Legal_Colombia.pdf</a>.
+                                </li>
+                                <li>[18] Moreno, P. (2016). Manejo Integral de Cuencas Hidrográficas en el Valle
+                                    Geográfico Alto del río Cauca. Fondo Agua por la Vida y la Sostenibilidad. En: <a
+                                        href="https://www.asocana.org/documentos/2642016-1637CC45-00FF00,000A000,878787,C3C3C3,0F0F0F,B4B4B4,FF00FF,FFFFFF,2D2D2D,A3C4B5,D2D2D2.pdf"
+                                        target="_blank"
+                                        rel="noopener noreferrer">https://www.asocana.org/documentos/2642016-1637CC45-00FF00,000A000,878787,C3C3C3,0F0F0F,B4B4B4,FF00FF,FFFFFF,2D2D2D,A3C4B5,D2D2D2.pdf</a>.
+                                </li>
+                                <li>[19] Programa de las Naciones Unidas para el Desarrollo (PNUD) - Grupo
+                                    Interinstitucional de Herramientas de Conservación Privada (G5), Exención predial
+                                    por conservación: Guía metodológica para su aplicación en municipios, 2014: <a
+                                        href="https://es.search.yahoo.com/search?fr=mcafee&type=E211ES885G0&p=PNUD"
+                                        target="_blank"
+                                        rel="noopener noreferrer">https://es.search.yahoo.com/search?fr=mcafee&type=E211ES885G0&p=PNUD</a>.
+                                </li>
+                                <li>[20] Ministerio de Vivienda (2002). Decreto 1337. En: <a
+                                        href="http://www.minvivienda.gov.co/Decretos%20Vivienda/1337%20-%202002.pdf"
+                                        target="_blank"
+                                        rel="noopener noreferrer">http://www.minvivienda.gov.co/Decretos%20Vivienda/1337%20-%202002.pdf</a>.
+                                </li>
+                                <li>[21] Ministerio de Ambiente y Desarrollo Sostenible. ¿Qué son los negocios verdes?
+                                    En: <a
+                                        href="https://www.minambiente.gov.co/index.php/component/content/article/1381-plantilla-negocios-verdes-y-sostenibles-38"
+                                        target="_blank"
+                                        rel="noopener noreferrer">https://www.minambiente.gov.co/index.php/component/content/article/1381-plantilla-negocios-verdes-y-sostenibles-38</a>.
+                                </li>
+                                <li>[22] Ministerio de Ambiente y Desarrollo Sostenible. REDD+. En: <a
+                                        href="https://www.minambiente.gov.co/index.php/component/content/article?id=439:plantilla-bosques-biodiversidad-y-servicios-ecosistematicos-32"
+                                        target="_blank"
+                                        rel="noopener noreferrer">https://www.minambiente.gov.co/index.php/component/content/article?id=439:plantilla-bosques-biodiversidad-y-servicios-ecosistematicos-32</a>.
+                                </li>
+                                <li>[23] Ministerio de Ambiente y Desarrollo Sostenible. REDD+ Conozca qué es el Mercado
+                                    Voluntario de Carbono - Redd+. En: <a
+                                        href="https://www.minambiente.gov.co/index.php/bosques-biodiversidad-y-servicios-ecosistematicos/reduccion-de-emisiones-de-gases/conozca-que-es-el-mercado-del-carbono"
+                                        target="_blank"
+                                        rel="noopener noreferrer">https://www.minambiente.gov.co/index.php/bosques-biodiversidad-y-servicios-ecosistematicos/reduccion-de-emisiones-de-gases/conozca-que-es-el-mercado-del-carbono</a>.
+                                </li>
+                                <li>[24] Fondo Global para el Medio Ambiente (Global Environmental Facility: GEF), PNUD.
+                                    (2014). Orientaciones para el diseño de instrumentos para la conservación de la
+                                    biodiversidad y los servicios ecosistémicos. Bogotá: El Bando Creativo, TNC, WWF.
+                                </li>
+                                <li>[25] El negocio fiduciario en Colombia: conceptos básicos. En: <a
+                                        href="https://www.asofiduciarias.org.co/wp-content/uploads/2017/12/Aspectos-Basicos-del-Negocio-Fiduciario-AF-DIC-2015.pdf"
+                                        target="_blank"
+                                        rel="noopener noreferrer">https://www.asofiduciarias.org.co/wp-content/uploads/2017/12/Aspectos-Basicos-del-Negocio-Fiduciario-AF-DIC-2015.pdf</a>.
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="assets/thirdpart/js/jquery-3.5.1.min.js"></script>
+    <script src="assets/thirdpart/js/bootstrap.min.js"></script>
+    <script src="assets/thirdpart/js/easyzoom.js"></script>
+    <script src="assets/js/master.js"></script>
+    <script src="assets/js/jsonSVG.js"></script>
+</body>
+
+</html>
